@@ -1,4 +1,4 @@
-package com.example.testfarma_tc2007
+package com.example.testfarma_app
 
 import org.junit.Test
 

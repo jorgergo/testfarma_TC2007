@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testfarma_TC2007.iml" filepath="$PROJECT_DIR$/.idea/modules/testfarma_TC2007.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/testfarma_TC2007.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/testfarma_TC2007.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/testfarma_TC2007.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/testfarma_TC2007.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/testfarma_TC2007.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/testfarma_TC2007.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/testfarma_TC2007.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/testfarma_TC2007.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestFarma_app.iml" filepath="$PROJECT_DIR$/.idea/modules/TestFarma_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TestFarma_app.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TestFarma_app.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TestFarma_app.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TestFarma_app.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TestFarma_app.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TestFarma_app.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TestFarma_app.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TestFarma_app.app.unitTest.iml" />
     </modules>
   </component>
 </project>
