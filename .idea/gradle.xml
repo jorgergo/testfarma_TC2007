@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -10,6 +11,17 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/com.google.firebase" />
+            <option value="$PROJECT_DIR$/com.google.firebase/firebase-core" />
+            <option value="$PROJECT_DIR$/com.google.firebase/firebase-core/30.3.2" />
+            <option value="$PROJECT_DIR$/com.google.firebase/firebase-database" />
+            <option value="$PROJECT_DIR$/com.google.firebase/firebase-database/30.3.2" />
+            <option value="$PROJECT_DIR$/info.hoang8f" />
+            <option value="$PROJECT_DIR$/info.hoang8f/fbutton" />
+            <option value="$PROJECT_DIR$/info.hoang8f/fbutton/1.2.0" />
+            <option value="$PROJECT_DIR$/rengwuxian.materialedittext" />
+            <option value="$PROJECT_DIR$/rengwuxian.materialedittext/library" />
+            <option value="$PROJECT_DIR$/rengwuxian.materialedittext/library/2.1.4" />
           </set>
         </option>
       </GradleProjectSettings>

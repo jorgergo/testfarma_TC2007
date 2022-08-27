@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "849170823086",
+    "project_id": "testfarmatc2007",
+    "storage_bucket": "testfarmatc2007.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849170823086:android:e8b503f7ec282e8aec7a3f",
+        "android_client_info": {
+          "package_name": "com.example.testfarma_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849170823086-dkjle8ssscb6rn9h174ukq3s7i49624t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.testfarma_app",
+            "certificate_hash": "c6f7f091e0d0d988b8707c2c3ee6cb3c53a290ac"
+          }
+        },
+        {
+          "client_id": "849170823086-nth9c6ue7l7clbps9ivb48qflblb1628.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGqZGW1gLvczALN6ntr-YDCXxUZUeeaTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849170823086-nth9c6ue7l7clbps9ivb48qflblb1628.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

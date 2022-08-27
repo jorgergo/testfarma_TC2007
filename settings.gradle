@@ -6,7 +6,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "TestFarma_app"
 include ':app'
+include 'com.google.firebase:firebase-core:30.3.2'
+include 'com.google.firebase:firebase-database:30.3.2'
+include 'info.hoang8f:fbutton:1.2.0'
+include 'rengwuxian.materialedittext:library:2.1.4'
