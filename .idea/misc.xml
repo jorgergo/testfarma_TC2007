@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jorch/Desktop/testfarma_TC2007/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/user/Documents/GitHub/testfarma_TC2007/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1995" />
+        <entry key="..\:/Users/user/Documents/GitHub/testfarma_TC2007/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1175" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2128524230407165" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2725" />
@@ -15,12 +17,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.11790924072265627" />
-      </ProjectState>
-    </option>
   </component>
 </project>

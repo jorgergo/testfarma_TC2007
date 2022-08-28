@@ -4,5 +4,10 @@
     <string name="menu">menu</string>
     <string name="logo">logo</string>
     <string name="carrito">carrito</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="reg_strate">Regístrate</string>
+    <string name="no_tienes_una_cuenta">¿No tienes una cuenta?</string>
+    <string name="o">Ó</string>
+    <string name="continuar_como_invitado">Continuar como invitado</string>
 
 </resources>
