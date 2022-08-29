@@ -1,14 +1,19 @@
 <resources>
-    <string name="app_name">TestFarma_app</string>
+    <string name="app_name">TestFarma</string>
     <string name="slogan">Bienvenido a TestFarma</string>
     <string name="menu">menu</string>
     <string name="logo">logo</string>
     <string name="carrito">carrito</string>
     <string name="iniciar_sesion">Iniciar sesión</string>
-    <string name="reg_strate">Regístrate</string>
+    <string name="registrate">Regístrate</string>
     <string name="no_tienes_una_cuenta">¿No tienes una cuenta?</string>
     <string name="o">Ó</string>
+    <string name="inicia_sesion">Inicia sesión</string>
     <string name="continuar_como_invitado">Continuar como invitado</string>
     <string name="perfil">perfil</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="back">Regresar</string>
 
 </resources>

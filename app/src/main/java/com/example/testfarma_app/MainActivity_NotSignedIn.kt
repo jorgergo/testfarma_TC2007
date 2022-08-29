@@ -1,11 +1,14 @@
 package com.example.testfarma_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity_NotSignedIn : AppCompatActivity() {
+
 
     private val list = mutableListOf<CarouselItem>()
 
@@ -16,6 +19,18 @@ class MainActivity : AppCompatActivity() {
         list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
         list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
         carousel.addData(list)
+
+        btn_signin.setOnClickListener {
+            val intent = Intent(this, SignIn::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btn_signup.setOnClickListener {
+
+        }
+
+
 
     }
 }
