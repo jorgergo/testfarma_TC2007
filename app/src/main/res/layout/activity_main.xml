@@ -18,57 +18,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/carrito"
-            android:layout_width="39dp"
-            android:layout_height="44dp"
-            android:layout_marginEnd="24dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/carrito"
             android:contentDescription="@string/carrito"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.517"
-            app:srcCompat="@drawable/carrito"
             tools:layout_conversion_absoluteHeight="40dp"
             tools:layout_conversion_absoluteWidth="40dp" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/perfil"
-            android:layout_width="31dp"
-            android:layout_height="43dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="16dp"
-            android:contentDescription="@string/carrito"
+            android:layout_width="35dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/perfil"
+            android:contentDescription="@string/perfil"
             android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/carrito"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/perfil"
             tools:layout_conversion_absoluteHeight="40dp"
             tools:layout_conversion_absoluteWidth="40dp" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/menu"
-            android:layout_width="45dp"
-            android:layout_height="38dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="14dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:background="@drawable/menu"
             android:contentDescription="@string/menu"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/menu"
+            app:layout_constraintVertical_bias="0.533"
             tools:layout_conversion_absoluteHeight="40dp"
             tools:layout_conversion_absoluteWidth="40dp" />
 
-        <ImageView
+        <ImageButton
             android:id="@+id/logo"
-            android:layout_width="201dp"
-            android:layout_height="54dp"
+            android:layout_width="200dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="2dp"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="2dp"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/logo"
             android:contentDescription="@string/logo"
             android:foregroundGravity="center|center_horizontal"
             android:visibility="visible"
@@ -76,7 +80,6 @@
             app:layout_constraintEnd_toStartOf="@+id/perfil"
             app:layout_constraintStart_toEndOf="@+id/menu"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo"
             tools:layout_conversion_absoluteHeight="70dp"
             tools:layout_conversion_absoluteWidth="245dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>

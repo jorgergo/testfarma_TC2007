@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val carousel: ImageCarousel = findViewById(R.id.carousel)
         list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
-        list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplodos))
+        list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
         carousel.addData(list)
 
     }
