@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/fergo/Documents/GitHub/testfarma_TC2007/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/fergo/Documents/GitHub/testfarma_TC2007/app/src/main/res/layout/activity_reg.xml" value="0.264" />
+        <entry key="..\:/Users/fergo/Documents/GitHub/testfarma_TC2007/app/src/main/res/layout/activity_sign_in.xml" value="0.2" />
         <entry key="..\:/Users/jorch/Desktop/testfarma_TC2007/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2745" />
         <entry key="..\:/Users/jorch/Desktop/testfarma_TC2007/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2745" />
         <entry key="..\:/Users/jorch/Desktop/testfarma_TC2007/app/src/main/res/layout/activity_main.xml" value="0.33" />
@@ -20,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>
