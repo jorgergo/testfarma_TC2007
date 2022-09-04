@@ -16,6 +16,9 @@
         android:theme="@style/Theme.TestFarma_app"
         tools:targetApi="31">
         <activity
+            android:name=".estudio"
+            android:exported="false" />
+        <activity
             android:name=".SignIn"
             android:exported="false" />
         <activity

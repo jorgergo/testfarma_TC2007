@@ -46,6 +46,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'me.relex:circleindicator:2.1.6'
     implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.1")
     //implementation 'com.google.firebase:firebase-core:21.1.0'
     //implementation 'com.google.firebase:firebase-database:20.0.5'
     //implementation 'info.hoang8f:fbutton:1.0.5'

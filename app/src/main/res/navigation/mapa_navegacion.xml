@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapa_navegacion"
+    app:startDestination="@id/estudio">
+
+    <activity
+        android:id="@+id/estudio"
+        android:name="com.example.testfarma_app.estudio"
+        android:label="estudio" />
+    <activity
+        android:id="@+id/mainActivity_NotSignedIn"
+        android:name="com.example.testfarma_app.MainActivity_NotSignedIn"
+        android:label="activity_sign_in"
+        tools:layout="@layout/activity_sign_in" />
+    <activity
+        android:id="@+id/signIn"
+        android:name="com.example.testfarma_app.SignIn"
+        android:label="SignIn" />
+</navigation>

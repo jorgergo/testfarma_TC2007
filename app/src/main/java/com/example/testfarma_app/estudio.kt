@@ -5,50 +5,31 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_sign_in.*
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 
-class MainActivity_NotSignedIn : AppCompatActivity() {
+private val list = mutableListOf<CarouselItem>()
 
-
-    private val list = mutableListOf<CarouselItem>()
-
+class estudio : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_estudio)
+        val recyclerView = findViewById<RecyclerView>(R.id.estudio_recy)
+        val adapter = estudio_adapter()
+
         val carousel: ImageCarousel = findViewById(R.id.carousel)
         list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
         list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
         carousel.addData(list)
 
-        /*
-        //↓↓↓↓↓ Estudio disponible ↓↓↓↓↓
-        val recyclerView = findViewById<RecyclerView>(R.id.estudio_lista)
-        val adapter = estudio_adapter()
-
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
-        //↑↑↑↑↑ Estudio disponible ↑↑↑↑↑
 
-         */
-
-        btn_signin.setOnClickListener {
-            val intent = Intent(this, SignIn::class.java)
+        back.setOnClickListener {
+            val intent = Intent(this, MainActivity_NotSignedIn::class.java)
             startActivity(intent)
             finish()
         }
-
-        btn_signup.setOnClickListener {
-
-        }
-
-        carrito.setOnClickListener {
-            startActivity(Intent(this, estudio::class.java))
-
-        }
-
-
     }
 }

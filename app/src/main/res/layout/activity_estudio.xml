@@ -30,6 +30,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.517"
+            tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="40dp"
             tools:layout_conversion_absoluteWidth="40dp" />
 
@@ -44,6 +45,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/carrito"
             app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="40dp"
             tools:layout_conversion_absoluteWidth="40dp" />
 
@@ -61,6 +63,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.533"
+            tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="40dp"
             tools:layout_conversion_absoluteWidth="40dp" />
 
@@ -80,6 +83,7 @@
             app:layout_constraintEnd_toStartOf="@+id/perfil"
             app:layout_constraintStart_toEndOf="@+id/menu"
             app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="70dp"
             tools:layout_conversion_absoluteWidth="245dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -112,90 +116,38 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
 
-            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                android:id="@+id/carousel"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="275dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/btn_signin"
-                android:layout_width="288dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="158dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="158dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/iniciar_sesion"
-                android:textColor="#455A64"
-                app:layout_constraintBottom_toTopOf="@+id/textView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.509"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/carousel" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="158dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="158dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/no_tienes_una_cuenta"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/btn_signup"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+                    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                        android:id="@+id/carousel"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
 
-            <Button
-                android:id="@+id/btn_signup"
-                android:layout_width="288dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="158dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="158dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/registrate"
-                android:textColor="#455A64"
-                app:layout_constraintBottom_toTopOf="@+id/textView2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.516"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                    </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="158dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="158dp"
-                android:layout_marginBottom="16dp"
-                android:text="@string/o"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/btn_guest"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_signup" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/estudio_recy"
+                        android:layout_width="391dp"
+                        android:layout_height="390dp">
 
-            <Button
-                android:id="@+id/btn_guest"
-                android:layout_width="288dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="158dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="158dp"
-                android:layout_marginBottom="70dp"
-                android:text="@string/continuar_como_invitado"
-                android:textColor="#455A64"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <Button
+                        android:id="@+id/back"
+                        android:layout_width="127dp"
+                        android:layout_height="48dp"
+                        android:text="@string/back"
+                        android:textColor="#455A64" />
+
+                </LinearLayout>
+            </ScrollView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
