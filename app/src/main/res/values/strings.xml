@@ -27,5 +27,8 @@
     <string name="no">No</string>
     <string name="he_le_do_y_acepto_el_acuerdo_de_privacidad">He Leído Y acepto el acuerdo de privacidad.</string>
     <string name="promociones">Promociones</string>
+    <string name="resultados">Resultados</string>
+    <string name="id_usr">"ID: "</string>
+    <string name="hist_res_usr">"Historial"</string>
 
 </resources>

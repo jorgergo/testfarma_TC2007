@@ -15,7 +15,7 @@ class estudio : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estudio)
-        val recyclerView = findViewById<RecyclerView>(R.id.estudio_recy)
+        val recyclerView = findViewById<RecyclerView>(R.id.resultados_rec)
         val adapter = estudio_adapter()
 
         val carousel: ImageCarousel = findViewById(R.id.carousel)

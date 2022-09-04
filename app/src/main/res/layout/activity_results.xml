@@ -125,19 +125,72 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
 
-                    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                        android:id="@+id/carousel"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sep_amarillo"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp">
+                        android:layout_height="43dp"
+                        android:background="#fbcd23">
 
-                    </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/id_d_usuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="#c4c4c4">
+
+                        <TextView
+                            android:id="@+id/Id_usuario"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/id_usr"
+                            android:textAlignment="center"
+                            android:textColor="#272625"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/results_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="#FFFFFF"
+                        android:text="@string/resultados"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/resultados_rec"
-                        android:layout_width="391dp"
-                        android:layout_height="390dp">
+                        android:layout_width="344dp"
+                        android:layout_height="115dp"
+                        android:background="#c4c4c4"
+                        android:translationX="20dp">
 
                     </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/hist_result_usr"
+                        android:layout_width="match_parent"
+                        android:layout_height="59dp"
+                        android:background="#FFFFFF"
+                        android:text="@string/hist_res_usr"
+                        android:textAlignment="center"
+                        android:textColor="#272625"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/hist_res"
+                        android:layout_width="344dp"
+                        android:layout_height="match_parent"
+                        android:background="#c4c4c4"
+                        android:translationX="20dp" />
 
                     <Button
                         android:id="@+id/back"
