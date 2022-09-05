@@ -3,12 +3,9 @@ package com.example.testfarma_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity_NotSignedIn : AppCompatActivity() {
 
@@ -44,8 +41,8 @@ class MainActivity_NotSignedIn : AppCompatActivity() {
 
         }
 
-        carrito.setOnClickListener {
-            startActivity(Intent(this, estudio::class.java))
+        carrito_icon.setOnClickListener {
+            startActivity(Intent(this, carrito::class.java))
 
         }
 

@@ -19,11 +19,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/carrito"
+            android:id="@+id/carrito_icon"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/carrito"
+            android:background="@drawable/carrito_icon"
             android:contentDescription="@string/carrito"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +43,7 @@
             android:contentDescription="@string/perfil"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/carrito"
+            app:layout_constraintEnd_toStartOf="@+id/carrito_icon"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="40dp"

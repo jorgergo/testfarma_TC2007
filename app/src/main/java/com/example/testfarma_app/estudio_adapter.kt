@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 
 class estudio_adapter: RecyclerView.Adapter<estudio_adapter.ViewHolder>(){
@@ -16,7 +15,7 @@ class estudio_adapter: RecyclerView.Adapter<estudio_adapter.ViewHolder>(){
 
     val precio = arrayOf("$1243", "$4231", "$3124")
 
-    val imagen = intArrayOf(R.drawable.carrito, R.drawable.carrito, R.drawable.carrito)
+    val imagen = arrayOf(R.drawable.carrito_icon, R.drawable.carrito_icon, R.drawable.carrito_icon)
 
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         var itemDes: TextView
