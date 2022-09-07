@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/resultados_rec"
     android:layout_width="match_parent"
@@ -17,34 +19,39 @@
 
         <TextView
             android:id="@+id/estudio_des"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="30dp"
-            android:layout_marginRight="16dp"
-            android:text="Estudio ejemplo"
-            android:textAlignment="textStart"
-            android:textColor="@color/white"></TextView>
+            style="@style/Widget.Inventory.ListItemTextView"
+            android:layout_width="121dp"
+            android:layout_height="48dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Estudio sangre" />
 
         <TextView
             android:id="@+id/estudio_price"
+            style="@style/Widget.Inventory.ListItemTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="30dp"
-            android:layout_toEndOf="@id/estudio_des"
-            android:layout_toRightOf="@id/estudio_des"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/estudio_des"
             android:text="$1243"
-            android:textColor="@color/white"></TextView>
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
 
         <ImageView
             android:id="@+id/estudio_mas"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginEnd="30dp"
-            android:layout_toRightOf="@id/estudio_price"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
             card_view:srcCompat="@android:drawable/ic_input_add" />
 
     </RelativeLayout>

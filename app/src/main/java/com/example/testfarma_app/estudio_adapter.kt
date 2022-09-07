@@ -9,13 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 
 class estudio_adapter: RecyclerView.Adapter<estudio_adapter.ViewHolder>(){
 
-    val descripcion = arrayOf("Una brebe descripcion de estudio",
-        "Una brebe descripcion de estudio2" ,
-        "Una brebe descripcion de estudio3")
+    val descripcion = arrayOf("Estidio de sangre",
+        "Estidio de sangre2" ,
+        "Estidio de sangre3")
 
     val precio = arrayOf("$1243", "$4231", "$3124")
 
-    val imagen = arrayOf(R.drawable.carrito_icon, R.drawable.carrito_icon, R.drawable.carrito_icon)
+    val imagen = arrayOf(R.drawable.mas_icon, R.drawable.mas_icon, R.drawable.mas_icon)
 
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         var itemDes: TextView

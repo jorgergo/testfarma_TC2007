@@ -13,15 +13,11 @@ class carrito : AppCompatActivity() {
         setContentView(R.layout.activity_carrito)
 
         back.setOnClickListener {
-            val intent = Intent(this, MainActivity_NotSignedIn::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        irEstudio.setOnClickListener {
             val intent = Intent(this, estudio::class.java)
             startActivity(intent)
             finish()
         }
+
+
     }
 }
