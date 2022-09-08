@@ -1,0 +1,9 @@
+{
+  "comment": "Sample data structure",
+  "data": [
+    {
+      "name": "Segun",
+      "age": "25",
+    }
+  ]
+}

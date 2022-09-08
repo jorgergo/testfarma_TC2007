@@ -118,12 +118,14 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/sep_amarillo"
@@ -150,14 +152,30 @@
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.193"
                             app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="28dp"
+                            android:text="1123456789"
+                            android:textColor="#272625"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/Id_usuario"
                             app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
                         android:id="@+id/results_user"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:background="#FFFFFF"
                         android:text="@string/resultados"
                         android:textAlignment="center"
@@ -165,19 +183,45 @@
                         android:textSize="34sp"
                         android:textStyle="bold" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/resultados_rec"
-                        android:layout_width="344dp"
-                        android:layout_height="115dp"
-                        android:background="#c4c4c4"
-                        android:translationX="20dp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="191dp"
+                        android:background="#c4c4c4">
 
-                    </androidx.recyclerview.widget.RecyclerView>
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="109dp"
+                            android:layout_height="116dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.102"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.865"
+                            app:srcCompat="@drawable/pdf" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="103dp"
+                            android:layout_height="43dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="EstudiosDeSangre10-08-2022"
+                            android:textColor="#272625"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/imageView6"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.154"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.571" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
                         android:id="@+id/hist_result_usr"
                         android:layout_width="match_parent"
-                        android:layout_height="59dp"
+                        android:layout_height="wrap_content"
                         android:background="#FFFFFF"
                         android:text="@string/hist_res_usr"
                         android:textAlignment="center"
@@ -185,12 +229,63 @@
                         android:textSize="34sp"
                         android:textStyle="bold" />
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/hist_res"
-                        android:layout_width="344dp"
-                        android:layout_height="match_parent"
-                        android:background="#c4c4c4"
-                        android:translationX="20dp" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="266dp"
+                        android:background="#c4c4c4">
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="85dp"
+                            android:layout_height="100dp"
+                            android:layout_marginBottom="44dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.201"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView12"
+                            app:layout_constraintVertical_bias="0.29"
+                            app:srcCompat="@drawable/pdf" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="85dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.771"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView13"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:srcCompat="@drawable/pdf" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="143dp"
+                            android:layout_height="43dp"
+                            android:layout_marginTop="24dp"
+                            android:text="EstudiosDeSangre10-08-2022"
+                            android:textColor="#272625"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.133"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="143dp"
+                            android:layout_height="43dp"
+                            android:layout_marginTop="24dp"
+                            android:text="Radiografia10-08-2022"
+                            android:textColor="#272625"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.856"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <Button
                         android:id="@+id/back"
