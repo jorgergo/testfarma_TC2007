@@ -21,7 +21,7 @@ class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
         val sucursal = resources.getStringArray(R.array.sucursal_ar)
         val adapter = ArrayAdapter(
             this,
-            R.layout.list_sucursal,
+            R.layout.list_cita,
             sucursal
         )
         with(binding.sucursalSelect) {
@@ -32,7 +32,7 @@ class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
         val hora= resources.getStringArray(R.array.time_ar)
         val adapter1 = ArrayAdapter(
             this,
-            R.layout.list_hora,
+            R.layout.list_cita,
             hora
 
         )
@@ -44,7 +44,7 @@ class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
         val estudio= resources.getStringArray(R.array.estudio_ar)
         val adapter2 = ArrayAdapter(
             this,
-            R.layout.list_estudios,
+            R.layout.list_cita,
             estudio
 
         )
