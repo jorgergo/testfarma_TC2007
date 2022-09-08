@@ -37,6 +37,12 @@
     <string name="descarga_pdf">descarga_pdf</string>
     <string name="pdf_show">pdf_show</string>
     <string name="facturas_generadas">Facturas Generadas</string>
+    <string name="sucursal_pop">Conoce nuestros horarios</string>
+    <string name="guardar">Guardar</string>
+    <string name="sus_datos_estan_protegidos_con_su_usuario_y_solo_ser_n_usados_para_generar_su_cita">Sus datos estan protegidos con su usuario y solo serán usados para generar su cita</string>
+    <string name="selecciona_la_hora">Selecciona la hora</string>
+    <string name="selecciona_el_estudio">Selecciona el estudio</string>
+    <string name="selecciona_la_sucursal">Selecciona la sucursal</string>
     
     <!--Dropdown_sucursal-->
     <string-array name="sucursal_ar">
