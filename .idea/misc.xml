@@ -25,7 +25,16 @@
         <entry key="..\:/github_archivos/testfarma_TC2007/app/src/main/res/layout/carrito_layout.xml" value="0.20512820512820512" />
         <entry key="..\:/github_archivos/testfarma_TC2007/app/src/main/res/layout/estudio_layout.xml" value="0.536" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1175" />
+        <entry key="app/src/main/res/layout/activity_carrito.xml" value="0.14487179487179488" />
+        <entry key="app/src/main/res/layout/activity_datosfacturacion.xml" value="0.144017094017094" />
+        <entry key="app/src/main/res/layout/activity_estudio.xml" value="0.14487179487179488" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2128524230407165" />
+        <entry key="app/src/main/res/layout/activity_reg.xml" value="0.14487179487179488" />
+        <entry key="app/src/main/res/layout/activity_results.xml" value="0.2477355072463768" />
+        <entry key="app/src/main/res/layout/activity_sign_in.xml" value="0.2863247863247863" />
+        <entry key="app/src/main/res/layout/carrito_layout.xml" value="0.14487179487179488" />
+        <entry key="app/src/main/res/layout/estudio_layout.xml" value="0.14487179487179488" />
+        <entry key="app/src/main/res/layout/promo_layout.xml" value="0.14487179487179488" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2725" />
       </map>
     </option>

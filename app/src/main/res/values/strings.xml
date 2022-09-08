@@ -30,5 +30,19 @@
     <string name="resultados">Resultados</string>
     <string name="id_usr">"ID: "</string>
     <string name="hist_res_usr">"Historial"</string>
+    <string name="fact">Facturacion</string>
+    <string name="nombrefact">Nombre o Razón social</string>
+    <string name="RFC">RFC</string>
+    <string name="RF">Regimen Fiscal</string>
+    <string name="correo_fact">Correo</string>
+    <string name="CP">Codigo Postal</string>
+    <string name="Send">Generar</string>
+    <string-array name="Regimen">
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>A4</item>
+        <item>A5</item>
+    </string-array>
 
 </resources>
