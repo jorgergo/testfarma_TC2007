@@ -5,12 +5,15 @@
       <map>
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2275" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2275" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/activity_carrito.xml" value="0.13533834586466165" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/activity_estudio.xml" value="0.1" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/activity_main.xml" value="0.1490036231884058" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/activity_reg.xml" value="0.1490036231884058" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/activity_results.xml" value="0.1490036231884058" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/carrito_layout.xml" value="0.17028985507246377" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/estudio_layout.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/mostrar_facturas_layout.xml" value="0.1349206349206349" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/promo_layout.xml" value="0.18461538461538463" />
         <entry key="..\:/Users/fergo/Documents/GitHub/testfarma_TC2007/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/fergo/Documents/GitHub/testfarma_TC2007/app/src/main/res/layout/activity_reg.xml" value="0.264" />

@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 
 class estudio_adapter: RecyclerView.Adapter<estudio_adapter.ViewHolder>(){
 
-    val descripcion = arrayOf("Estidio de sangre",
-        "Estidio de sangre2" ,
-        "Estidio de sangre3")
+    val descripcion = arrayOf("Estudio de sangre",
+        "Estudio de sangre2" ,
+        "Estudio de sangre3")
 
     val precio = arrayOf("$1243", "$4231", "$3124")
 
