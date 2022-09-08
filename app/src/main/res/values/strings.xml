@@ -30,5 +30,12 @@
     <string name="resultados">Resultados</string>
     <string name="id_usr">"ID: "</string>
     <string name="hist_res_usr">"Historial"</string>
+    <string name="descarga">Descarga</string>
+    <string name="todo">TODO</string>
+    <string name="ver_descarga">Ver Descarga</string>
+    <string name="todoview">TODO</string>
+    <string name="descarga_pdf">descarga_pdf</string>
+    <string name="pdf_show">pdf_show</string>
+    <string name="facturas_generadas">Facturas Generadas</string>
 
 </resources>
