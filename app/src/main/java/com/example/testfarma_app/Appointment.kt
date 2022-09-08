@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testfarma_app.databinding.ActivityApptBinding
+import org.imaginativeworld.whynotimagecarousel.ImageCarousel
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
     private lateinit var binding: ActivityApptBinding
