@@ -37,5 +37,45 @@
     <string name="descarga_pdf">descarga_pdf</string>
     <string name="pdf_show">pdf_show</string>
     <string name="facturas_generadas">Facturas Generadas</string>
+    
+    <!--Dropdown_sucursal-->
+    <string-array name="sucursal_ar">
+        <item>Sucursal A</item>
+        <item>Sucursal B</item>
+        <item>Sucursal C</item>
+        <item>Domicilio</item>
+    </string-array>
+
+    <!--Dropdown_hora-->
+    <string-array name="time_ar">
+        <item>8:00</item>
+        <item>8:10</item>
+        <item>8:20</item>
+        <item>8:30</item>
+        <item>8:40</item>
+        <item>8:50</item>
+        <item>9:00</item>
+        <item>9:10</item>
+        <item>9:20</item>
+        <item>9:30</item>
+        <item>9:40</item>
+        <item>9:50</item>
+        <item>10:00</item>
+        <item>10:10</item>
+        <item>10:20</item>
+        <item>10:30</item>
+        <item>10:40</item>
+        <item>10:50</item>
+        <item>11:00</item>
+    </string-array>
+
+    <string-array name="estudio_ar">
+        <item>Estudio A</item>
+        <item>Estudio B</item>
+        <item>Estudio C</item>
+        <item>Estudio D</item>
+        <item>Estudio E</item>
+        <item>Estudio F</item>
+    </string-array>
 
 </resources>
