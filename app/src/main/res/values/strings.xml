@@ -93,6 +93,7 @@
     <string name="correo_fact">Correo</string>
     <string name="CP">Codigo Postal</string>
     <string name="Send">Generar</string>
+    <string name="guardar_cita">Guardar</string>
     <string-array name="Regimen">
         <item>A1</item>
         <item>A2</item>

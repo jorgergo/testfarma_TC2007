@@ -116,37 +116,31 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
 
-            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                android:id="@+id/carousel"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-                
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-black"
-                    android:gravity="center"
-                    android:text="@string/genera_tu_cita"
-                    android:textColor="@color/white"
-                    android:textSize="40dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.507" />
-            </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
 
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:layout_marginBottom="21dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/genera_tu_cita"
+                android:textColor="@color/black"
+                android:textSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_sucursalpop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/save_appt"
                 android:layout_width="wrap_content"
-                android:layout_height="45dp"
+                android:layout_height="48dp"
                 android:layout_marginBottom="10dp"
-                android:text="Guardar"
+                android:text="@string/guardar_cita"
                 android:textColor="#455A64"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -323,16 +317,16 @@
                 android:id="@+id/btn_sucursalpop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="368dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginBottom="484dp"
                 android:text="@string/sucursal_pop"
                 android:textColor="#455A64"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintHorizontal_bias="0.552"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/carousel"
-                app:layout_constraintVertical_bias="0.043"/>
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
