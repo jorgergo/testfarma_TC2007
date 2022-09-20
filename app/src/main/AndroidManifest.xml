@@ -28,6 +28,12 @@
             android:name=".SignIn"
             android:exported="false" />
         <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".Appointment"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity_NotSignedIn"
             android:exported="true">
             <intent-filter>
@@ -36,11 +42,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity
-            android:name=".Appointment"
-            android:exported="false" />
-        
     </application>
-
 </manifest>

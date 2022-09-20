@@ -38,7 +38,9 @@ class MainActivity_NotSignedIn : AppCompatActivity() {
         }
 
         btn_signup.setOnClickListener {
-
+            val intent = Intent(this, SignUp::class.java)
+            startActivity(intent)
+            finish()
         }
 
         carrito_icon.setOnClickListener {
