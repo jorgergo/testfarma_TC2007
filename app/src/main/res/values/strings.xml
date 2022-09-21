@@ -6,6 +6,7 @@
     <string name="carrito">carrito</string>
     <string name="iniciar_sesion">Iniciar sesión</string>
     <string name="registrate">Regístrate</string>
+    <string name="email">Correo</string>
     <string name="no_tienes_una_cuenta">¿No tienes una cuenta?</string>
     <string name="o">Ó</string>
     <string name="inicia_sesion">Inicia sesión</string>
@@ -15,17 +16,17 @@
     <string name="password">Contraseña</string>
     <string name="forgot_password">¿Olvidaste tu contraseña?</string>
     <string name="back">Regresar</string>
-    <string name="crea_tu_cuenta">¡Crea Tu cuenta!</string>
-    <string name="ingresa_t_correo_e">Ingresa Tú Correo E.</string>
+    <string name="crea_tu_cuenta">¡Crea tu cuenta!</string>
+    <string name="ingresa_t_correo_e">Ingresa tu Correo E</string>
     <string name="registrarse">Registrarse</string>
     <string name="cancelar">Cancelar</string>
-    <string name="nombre_completo">Nombre Completo.</string>
-    <string name="ingresa_t_n_mero_cel">Ingresa Tú Número Cel.</string>
-    <string name="crea_tu_contrase_a">Crea Tu Contraseña.</string>
-    <string name="ingresa_t_correo_el">Ingresa Tú Correo E.</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="ingresa_t_n_mero_cel">Ingresa tu número cel</string>
+    <string name="crea_tu_contrase_a">Crea tu contraseña</string>
+    <string name="ingresa_t_correo_el">Ingresa tu correo electrónico</string>
     <string name="s">Sí</string>
     <string name="no">No</string>
-    <string name="he_le_do_y_acepto_el_acuerdo_de_privacidad">He Leído Y acepto el acuerdo de privacidad.</string>
+    <string name="terms">Al hacer click en REGISTARSE aceptas la política de privacidad</string>
     <string name="promociones">Promociones</string>
     <string name="resultados">Resultados</string>
     <string name="id_usr">"ID: "</string>
@@ -94,6 +95,8 @@
     <string name="CP">Codigo Postal</string>
     <string name="Send">Generar</string>
     <string name="guardar_cita">Guardar</string>
+    <string name="contacto">CONTACTO</string>
+    <string name="telefono">Teléfono: 55 7081 7720</string>
     <string-array name="Regimen">
         <item>A1</item>
         <item>A2</item>

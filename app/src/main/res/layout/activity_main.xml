@@ -89,7 +89,7 @@
         android:layout_width="0dp"
         android:layout_height="700dp"
         android:layout_marginBottom="200dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryVariant"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

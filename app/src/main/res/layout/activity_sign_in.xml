@@ -93,7 +93,7 @@
         android:layout_width="0dp"
         android:layout_height="700dp"
         android:layout_marginBottom="200dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -111,10 +111,10 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintVertical_bias="1.0">
 
             <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                 android:id="@+id/carousel"
@@ -140,7 +140,7 @@
                 app:layout_constraintHorizontal_bias="0.659"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/carousel"
-                app:layout_constraintVertical_bias="0.569"
+                app:layout_constraintVertical_bias="0.536"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -204,7 +204,7 @@
                 android:layout_width="288dp"
                 android:layout_height="wrap_content"
                 android:text="@string/inicia_sesion"
-                android:textColor="#455A64"
+                android:textColor="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
@@ -214,14 +214,15 @@
 
             <Button
                 android:id="@+id/back"
-                android:layout_width="127dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_width="288dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
                 android:text="@string/back"
-                android:textColor="#455A64"
+                android:textColor="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_signup4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
