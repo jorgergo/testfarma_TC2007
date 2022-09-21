@@ -5,7 +5,6 @@
     android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".MainActivity_NotSignedIn">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -90,9 +89,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bloque_amarillo"
-        android:layout_width="0dp"
-        android:layout_height="700dp"
-        android:layout_marginBottom="200dp"
+        android:layout_width="388dp"
+        android:layout_height="746dp"
         android:background="@color/colorPrimary"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -183,40 +181,20 @@
                         android:textSize="34sp"
                         android:textStyle="bold" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <FrameLayout
+                        android:id="@+id/resultadosFL"
                         android:layout_width="match_parent"
-                        android:layout_height="191dp"
+                        android:layout_height="175dp"
                         android:background="#c4c4c4">
 
-                        <ImageView
-                            android:id="@+id/imageView6"
-                            android:layout_width="109dp"
-                            android:layout_height="116dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.102"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.865"
-                            app:srcCompat="@drawable/pdf" />
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="vertical"
+                            app:layoutManager="LinearLayoutManager"
 
-                        <TextView
-                            android:id="@+id/textView11"
-                            android:layout_width="103dp"
-                            android:layout_height="43dp"
-                            android:layout_marginBottom="8dp"
-                            android:text="EstudiosDeSangre10-08-2022"
-                            android:textColor="#272625"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            app:layout_constraintBottom_toTopOf="@+id/imageView6"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.154"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.571" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                            />
+                    </FrameLayout>
 
                     <TextView
                         android:id="@+id/hist_result_usr"
@@ -231,61 +209,8 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="266dp"
-                        android:background="#c4c4c4">
-
-                        <ImageView
-                            android:id="@+id/imageView7"
-                            android:layout_width="85dp"
-                            android:layout_height="100dp"
-                            android:layout_marginBottom="44dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.201"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView12"
-                            app:layout_constraintVertical_bias="0.29"
-                            app:srcCompat="@drawable/pdf" />
-
-                        <ImageView
-                            android:id="@+id/imageView8"
-                            android:layout_width="85dp"
-                            android:layout_height="100dp"
-                            android:layout_marginTop="20dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.771"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView13"
-                            app:layout_constraintVertical_bias="0.0"
-                            app:srcCompat="@drawable/pdf" />
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="143dp"
-                            android:layout_height="43dp"
-                            android:layout_marginTop="24dp"
-                            android:text="EstudiosDeSangre10-08-2022"
-                            android:textColor="#272625"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.133"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/textView13"
-                            android:layout_width="143dp"
-                            android:layout_height="43dp"
-                            android:layout_marginTop="24dp"
-                            android:text="Radiografia10-08-2022"
-                            android:textColor="#272625"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.856"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                        android:layout_height="227dp"
+                        android:background="#c4c4c4" />
 
                     <Button
                         android:id="@+id/back"
