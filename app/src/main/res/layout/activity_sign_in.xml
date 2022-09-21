@@ -97,7 +97,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontal_nav_bar"
         app:layout_constraintVertical_bias="0.0">
@@ -111,36 +111,25 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
-
-            <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                android:id="@+id/carousel"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="32dp"
-                app:layout_constraintBottom_toTopOf="@+id/username_title"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintVertical_bias="0.0">
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/email"
                 android:layout_width="349dp"
                 android:layout_height="48dp"
+                android:layout_marginTop="12dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:hint="Email"
+                android:inputType="textPersonName|textEmailAddress"
                 android:textColorHighlight="#FFC107"
                 android:textColorLink="#FBCD23"
-                app:layout_constraintBottom_toTopOf="@+id/password"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.659"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/carousel"
-                app:layout_constraintVertical_bias="0.536"
+                app:layout_constraintTop_toBottomOf="@+id/username_title"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -154,14 +143,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/password"
-                app:layout_constraintVertical_bias="0.042"
+                app:layout_constraintVertical_bias="0.113"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/password_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="140dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/password"
                 android:textColor="#000000"
                 android:textSize="20sp"
@@ -169,38 +158,38 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/carousel" />
+                app:layout_constraintTop_toBottomOf="@+id/email" />
 
             <TextView
                 android:id="@+id/username_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="29dp"
                 android:text="@string/username"
                 android:textColor="#020202"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.13"
+                app:layout_constraintHorizontal_bias="0.1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/carousel" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/password"
                 android:layout_width="349dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="12dp"
                 android:ems="10"
+                android:hint="Contraseña"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.659"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/password_title"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
             <Button
-                android:id="@+id/btn_signup4"
+                android:id="@+id/btn_login"
                 android:layout_width="288dp"
                 android:layout_height="wrap_content"
                 android:text="@string/inicia_sesion"
@@ -210,7 +199,7 @@
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4"
-                app:layout_constraintVertical_bias="0.284" />
+                app:layout_constraintVertical_bias="0.187" />
 
             <Button
                 android:id="@+id/back"
@@ -222,7 +211,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_signup4" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
