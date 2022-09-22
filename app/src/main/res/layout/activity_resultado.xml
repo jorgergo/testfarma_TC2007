@@ -188,12 +188,12 @@
                         android:background="#c4c4c4">
 
                         <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler_view_res"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scrollbars="vertical"
-                            app:layoutManager="LinearLayoutManager"
 
-                            />
+                            app:layoutManager="LinearLayoutManager" />
                     </FrameLayout>
 
                     <TextView
