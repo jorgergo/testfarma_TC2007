@@ -1,7 +1,6 @@
 package com.example.testfarma_app
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testfarma_app.adapterResultados.resultadosAdapter
@@ -14,8 +13,6 @@ class resultado : AppCompatActivity() {
         val myDataset = datasourceResultados().loadResultados()
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view_res)
         //should work
-        ///comments
-        Log.d("myTag", "This is my message");
 
         recyclerView.adapter = resultadosAdapter(this, myDataset)
         recyclerView.setHasFixedSize(true)
