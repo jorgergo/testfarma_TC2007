@@ -10,6 +10,7 @@
     <string name="no_tienes_una_cuenta">¿No tienes una cuenta?</string>
     <string name="o">Ó</string>
     <string name="inicia_sesion">Inicia sesión</string>
+    <string name="Logout">Salir</string>
     <string name="continuar_como_invitado">Continuar como invitado</string>
     <string name="perfil">perfil</string>
     <string name="username">Nombre de usuario</string>
@@ -45,7 +46,7 @@
     <string name="selecciona_el_estudio">Selecciona el estudio</string>
     <string name="selecciona_la_sucursal">Selecciona la sucursal</string>
     <string name="genera_tu_cita">Genera tu cita</string>
-    
+
     <!--Dropdown_sucursal-->
     <string-array name="sucursal_ar">
         <item>Sucursal A</item>

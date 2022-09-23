@@ -44,7 +44,7 @@
 
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress3"
+        android:id="@+id/editTextEmail"
         android:layout_width="349dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -73,7 +73,7 @@
         android:textColor="#020202"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress3"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
         android:textColor="#020202"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,23 +108,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/editTextPassword"
         android:layout_width="349dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="9dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="33dp"
         android:autofillHints=""
         android:backgroundTint="#000000"
         android:ems="10"
         android:hint="@string/crea_tu_contrase_a"
         android:inputType="textPassword"
         android:textColorHint="#3C3C3C"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username_title4" />
@@ -136,15 +134,17 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="179dp"
         android:text="@string/terms"
         android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cancelarReg" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextName"
         android:layout_width="349dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -163,17 +163,16 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/signUpBtn"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
         android:text="@string/registrarse"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+        app:layout_constraintVertical_bias="0.113" />
 
     <Button
         android:id="@+id/cancelarReg"
@@ -183,9 +182,8 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.691" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpBtn"
+        app:layout_constraintVertical_bias="0.089" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
