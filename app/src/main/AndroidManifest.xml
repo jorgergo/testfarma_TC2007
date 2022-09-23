@@ -16,7 +16,7 @@
         tools:targetApi="31">
         <activity
             android:name=".resultado"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".carrito"
             android:exported="false" />
