@@ -18,21 +18,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bca642b-3aff-4ec6-ac9b-c1b5838c84ff" name="Changes" comment="Feat: Added class para promociones&#10;&#10;Fix: Made project adjustments.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/SignIn.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/SignIn.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/SignUp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/SignUp.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8bca642b-3aff-4ec6-ac9b-c1b5838c84ff" name="Changes" comment="Feat: Added class para promociones&#10;&#10;Fix: Made project adjustments." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\jolop\.android\avd\Pixel_5_API_31.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[ZY22F8Q5TB]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -214,7 +206,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8bca642b-3aff-4ec6-ac9b-c1b5838c84ff" name="Changes" comment="" />
+      <changelist id="83481ee1-8af8-4ef6-ac02-a88da702093a" name="Changes" comment="" />
       <created>1661359955215</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
