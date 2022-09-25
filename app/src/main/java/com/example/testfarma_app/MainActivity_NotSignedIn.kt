@@ -1,11 +1,11 @@
 package com.example.testfarma_app
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity_NotSignedIn : AppCompatActivity() {
 
@@ -43,6 +43,7 @@ class MainActivity_NotSignedIn : AppCompatActivity() {
             finish()
         }
 
+        //  ir a la pantalla de carrito
         carrito_icon.setOnClickListener {
             startActivity(Intent(this, carrito::class.java))
 
