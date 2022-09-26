@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testfarma_app.modelo.estudio_modelo
 import kotlinx.android.synthetic.main.activity_estudio.*
 import kotlinx.android.synthetic.main.activity_sign_in.back
-import org.imaginativeworld.whynotimagecarousel.ImageCarousel
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 private val list = mutableListOf<CarouselItem>()
@@ -20,10 +19,11 @@ class estudio : AppCompatActivity(), estudio_adapter.OnEstudioClickListener {
         val adapter = estudio_adapter()
          */
 
-        val carousel: ImageCarousel = findViewById(R.id.carousel)
+        /*val carousel: ImageCarousel = findViewById(R.id.carousel)
         list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
         list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
         carousel.addData(list)
+         */
 
         /*
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -47,7 +47,9 @@ class estudio : AppCompatActivity(), estudio_adapter.OnEstudioClickListener {
         val listEstudios: List<estudio_modelo> = listOf(
             estudio_modelo("Estudio de sangre", "1234", linkIcono_mas),
             estudio_modelo("Estudio de saliva", "1432", linkIcono_mas),
-            estudio_modelo("Estudio de orina", "3214", linkIcono_mas)
+            estudio_modelo("Estudio de orina", "3214", linkIcono_mas),
+            estudio_modelo("Estudio de COVID19", "2122", linkIcono_mas),
+            estudio_modelo("Estudio de cancer", "4124", linkIcono_mas)
         )
         resultados_rec.adapter = estudio_adapter(this, listEstudios, this)
     }

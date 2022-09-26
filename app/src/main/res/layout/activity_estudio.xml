@@ -125,12 +125,28 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
 
-                    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-                        android:id="@+id/carousel"
+                    <TextView
+                        android:id="@+id/estudio_titulo"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Estudio disponible"
+                        android:textAlignment="center"
+                        android:textSize="34sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                    </org.imaginativeworld.whynotimagecarousel.ImageCarousel>
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="391dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/estudio_titulo" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/resultados_rec"
@@ -141,8 +157,9 @@
 
                     <Button
                         android:id="@+id/back"
-                        android:layout_width="127dp"
+                        android:layout_width="133dp"
                         android:layout_height="48dp"
+                        android:layout_marginStart="135dp"
                         android:text="@string/back"
                         android:textColor="#455A64" />
 
