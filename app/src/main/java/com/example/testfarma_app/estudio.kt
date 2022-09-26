@@ -12,7 +12,7 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 private val list = mutableListOf<CarouselItem>()
 
-class estudio : AppCompatActivity() {
+class estudio : AppCompatActivity(), estudio_adapter.OnEstudioClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estudio)
@@ -49,6 +49,24 @@ class estudio : AppCompatActivity() {
             estudio_modelo("Estudio de saliva", "1432", linkIcono_mas),
             estudio_modelo("Estudio de orina", "3214", linkIcono_mas)
         )
-        resultados_rec.adapter = estudio_adapter(this, listEstudios)
+        resultados_rec.adapter = estudio_adapter(this, listEstudios, this)
+    }
+
+    override fun onIconoClick(nombre: String, precio: String) {
+        //val builder = AlertDialog.Builder(this@estudio)
+
+
+        val intent = Intent(this, estudio_detail::class.java)
+
+
+        intent.putExtra("popupestudio", nombre)
+        intent.putExtra("popupprecio", precio)
+        intent.putExtra("popuptexto1", "Requerimiento: xxx")
+        intent.putExtra("popuptexto2", "Requerimiento: xxx")
+        intent.putExtra("darkstatusbar", false)
+        //builder.setView(intent)
+        //val dialog = builder.create()
+        //dialog.show()
+        startActivity(intent)
     }
 }

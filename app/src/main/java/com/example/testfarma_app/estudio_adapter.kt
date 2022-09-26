@@ -10,10 +10,15 @@ import com.example.testfarma_app.base.BaseViewHolder
 import com.example.testfarma_app.modelo.estudio_modelo
 import kotlinx.android.synthetic.main.estudio_layout.view.*
 
-class estudio_adapter(private val context: Context, val listaEstudio:List<estudio_modelo>): RecyclerView.Adapter<BaseViewHolder<*>>(){
+class estudio_adapter(
+    private val context: Context,
+    private val listaEstudio:List<estudio_modelo>,
+    private val itemClickListener: OnEstudioClickListener
+    ): RecyclerView.Adapter<BaseViewHolder<*>>(){
 
-
-
+    interface OnEstudioClickListener{
+        fun onIconoClick(nombre: String,precio: String)
+    }
 
     /*
     val descripcion = arrayOf("Estudio de sangre",
@@ -70,6 +75,8 @@ class estudio_adapter(private val context: Context, val listaEstudio:List<estudi
 
     inner class EstudioViewHolder(itemView: View): BaseViewHolder<estudio_modelo>(itemView){
         override fun bind(item: estudio_modelo, position: Int) {
+            itemView.setOnClickListener { itemClickListener.onIconoClick(item.nombre, item.precio) }
+
             itemView.estudio_des.text = item.nombre
             itemView.estudio_price.text = item.precio
             Glide.with(context).load(item.icono).into(itemView.estudio_mas)

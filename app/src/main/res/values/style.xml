@@ -22,4 +22,10 @@
         <item name="android:textAppearance">?attr/textAppearanceBody1</item>
     </style>
 
+    <style name="AppTheme_translucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
 </resources>
