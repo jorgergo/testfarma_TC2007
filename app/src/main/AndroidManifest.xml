@@ -27,7 +27,8 @@
             android:exported="false" />
         <activity
             android:name=".resultado"
-            android:exported="false" />
+            android:exported="true" />
+
         <activity
             android:name=".carrito"
             android:exported="false" />
