@@ -44,10 +44,12 @@ class MainActivity_NotSignedIn : AppCompatActivity() {
         }
 
         //  ir a la pantalla de carrito
-        carrito_icon.setOnClickListener {
+        /*carrito_icon.setOnClickListener {
             startActivity(Intent(this, carrito::class.java))
 
         }
+
+         */
 
         /*//  ir a la pantalla de resultado
         buttonRes.setOnClickListener {
