@@ -8,11 +8,21 @@ import androidx.recyclerview.widget.RecyclerView
 
 class resultadosAdapter(private val archList: ArrayList<arch_resultado>): RecyclerView.Adapter<resultadosAdapter.resViewHolder>(){
 
+
+    private lateinit var mListener: onItemClickListener
+
+    interface onItemClickListener{
+        fun onItemClick(position: Int)
+    }
+
+    fun setOnClickListener(listener: onItemClickListener){
+        mListener = listener
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): resViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.resultado_layout,
         parent,false)
-        return resViewHolder(itemView)
+        return resViewHolder(itemView, mListener)
     }
 
     override fun onBindViewHolder(holder: resViewHolder, position: Int) {
@@ -28,9 +38,15 @@ class resultadosAdapter(private val archList: ArrayList<arch_resultado>): Recycl
     }
 
 
-    class resViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    class resViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
         val f_name : TextView = itemView.findViewById(R.id.nom_arch)
         val date : TextView = itemView.findViewById(R.id.fecha_ar)
+
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
+        }
 
     }
 }
