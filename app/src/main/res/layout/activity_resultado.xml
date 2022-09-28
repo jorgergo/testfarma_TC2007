@@ -168,16 +168,17 @@
                 <FrameLayout
                     android:id="@+id/resultadosFL"
                     android:layout_width="match_parent"
-                    android:layout_height="271dp"
+                    android:layout_height="453dp"
                     android:background="#c4c4c4">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler_view_res"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:scrollbars="vertical"
+                        android:scrollbars="horizontal|vertical"
 
-                        app:layoutManager="LinearLayoutManager" />
+                        app:layoutManager="LinearLayoutManager"
+                        tools:listitem="@layout/resultado_layout" />
                 </FrameLayout>
 
                 <TextView
@@ -194,16 +195,21 @@
                 <FrameLayout
                     android:id="@+id/historial_FL"
                     android:layout_width="match_parent"
-                    android:layout_height="277dp"
+                    android:layout_height="73dp"
                     android:background="#c4c4c4">
 
-                    <androidx.recyclerview.widget.RecyclerView
+                    <!-- <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler_view_hist"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scrollbars="vertical"
 
-                        app:layoutManager="LinearLayoutManager" />
+                        app:layoutManager="LinearLayoutManager" /> -->
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="346dp"
+                        android:layout_height="103dp"
+                        android:text="TextView" />
                 </FrameLayout>
 
             </LinearLayout>

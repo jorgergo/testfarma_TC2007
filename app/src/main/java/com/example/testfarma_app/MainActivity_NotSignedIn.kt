@@ -49,8 +49,10 @@ class MainActivity_NotSignedIn : AppCompatActivity() {
 
         }
 
-        //  ir a la pantalla de resultado
-        //resultadossss.setOnClickListener { startActivity(Intent(this, resultado::class.java)) }
+        /*//  ir a la pantalla de resultado
+        buttonRes.setOnClickListener {
+            startActivity(Intent(this, resultado::class.java))
+        }*/
 
 
     }
