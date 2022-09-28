@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testfarma_app.databinding.ActivityApptBinding
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
+import androidx.annotation.RequiresApi
 
 
 class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
