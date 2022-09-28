@@ -7,12 +7,22 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
+import java.io.File
+import java.lang.Exception
 
 class resultado : AppCompatActivity() {
 
     private lateinit var dbref : DatabaseReference
     private lateinit var resRecyclerView : RecyclerView
     private lateinit var archArrayList: ArrayList<arch_resultado>
+    val resultadosRef =Firebase.storage.reference.child("Resultados")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +35,23 @@ class resultado : AppCompatActivity() {
         archArrayList = arrayListOf<arch_resultado>()
         getArchdata()
 
+    }
+
+    private fun downloadFiles(f_name: String) = CoroutineScope(Dispatchers.IO).launch {
+        try {
+            val strVacio = ""
+            val localFile = File.createTempFile(f_name,strVacio)
+            resultadosRef.getFile(localFile).addOnSuccessListener {
+                Toast.makeText(this@resultado, "Archivo descargado",Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener {
+                Toast.makeText(this@resultado,"Algo salio mal",Toast.LENGTH_SHORT).show()
+            }
+
+        } catch (e: Exception){
+            withContext(Dispatchers.Main){
+                Toast.makeText(this@resultado,e.message,Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun getArchdata() {
@@ -41,9 +68,14 @@ class resultado : AppCompatActivity() {
                     resRecyclerView.adapter = adapter
                     adapter.setOnClickListener(object : resultadosAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
-                            Toast.makeText(this@resultado, "clicked item no. "+ archArrayList.get(position),Toast.LENGTH_SHORT).show()
+                            //Toast.makeText(this@resultado, "clicked item no. "+ archArrayList.get(position).f_name.toString(),Toast.LENGTH_SHORT).show()
                             //add downloader
-                            
+                            var nombreFile = archArrayList.get(position).f_name.toString()
+                            //Toast.makeText(this@resultado, "clicked item : "+ nombreFile,Toast.LENGTH_SHORT).show()
+                            downloadFiles(nombreFile)
+
+
+
                         }
                     })
                 }
