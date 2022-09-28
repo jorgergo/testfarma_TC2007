@@ -102,7 +102,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/bloque_blanco"
+            android:id="@+id/authLayout"
             android:layout_width="0dp"
             android:layout_height="650dp"
             android:layout_marginBottom="30dp"
@@ -246,7 +246,7 @@
             android:text="Correo: Testfarma@gmail.com"
             android:textColor="#2B2828"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/bloque_blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/authLayout" />
 
         <TextView
             android:id="@+id/textView9"
@@ -257,7 +257,7 @@
             android:text="Telefono: 66213871"
             android:textColor="#2B2828"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/bloque_blanco" />
+            app:layout_constraintTop_toBottomOf="@+id/authLayout" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -268,7 +268,7 @@
             android:layout_marginTop="56dp"
             android:layout_marginEnd="284dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bloque_blanco"
+            app:layout_constraintTop_toBottomOf="@+id/authLayout"
             app:srcCompat="@drawable/telefono_icon" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

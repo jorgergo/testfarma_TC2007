@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/bloque_blanco"
+            android:id="@+id/authLayout"
             android:layout_width="0dp"
             android:layout_height="650dp"
             android:layout_marginBottom="30dp"

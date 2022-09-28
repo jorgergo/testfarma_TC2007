@@ -103,7 +103,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/bloque_blanco"
+            android:id="@+id/authLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="30dp"
@@ -115,6 +115,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/google_button"
+                android:layout_width="288dp"
+                android:layout_height="61dp"
+                android:backgroundTint="#00FFFFFF"
+                android:drawableStart="@drawable/googleg_standard_color_18"
+                android:text="@string/google_login"
+                android:textAlignment="center"
+                android:textColor="#455A64"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_login"
+                app:layout_constraintVertical_bias="0.039" />
 
             <EditText
                 android:id="@+id/email"
@@ -212,8 +228,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_login"
-                app:layout_constraintVertical_bias="0.122" />
+                app:layout_constraintTop_toBottomOf="@+id/google_button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
