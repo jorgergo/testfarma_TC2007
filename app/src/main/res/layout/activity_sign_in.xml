@@ -35,53 +35,20 @@
             tools:layout_conversion_absoluteWidth="40dp" />
 
         <ImageButton
-            android:id="@+id/perfil"
-            android:layout_width="35dp"
-            android:layout_height="42dp"
-            android:layout_marginEnd="12dp"
-            android:background="@drawable/perfil"
-            android:contentDescription="@string/perfil"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/carrito_icon"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck"
-            tools:layout_conversion_absoluteHeight="40dp"
-            tools:layout_conversion_absoluteWidth="40dp" />
-
-        <ImageButton
-            android:id="@+id/menu"
-            android:layout_width="40dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/menu"
-            android:contentDescription="@string/menu"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.533"
-            tools:ignore="TouchTargetSizeCheck"
-            tools:layout_conversion_absoluteHeight="40dp"
-            tools:layout_conversion_absoluteWidth="40dp" />
-
-        <ImageButton
             android:id="@+id/logo"
             android:layout_width="200dp"
             android:layout_height="42dp"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="85dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginEnd="50dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/logo"
             android:contentDescription="@string/logo"
             android:foregroundGravity="center|center_horizontal"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/perfil"
-            app:layout_constraintStart_toEndOf="@+id/menu"
+            app:layout_constraintEnd_toStartOf="@+id/carrito_icon"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="70dp"
@@ -103,7 +70,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/bloque_blanco"
+            android:id="@+id/authLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="30dp"
@@ -115,6 +82,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/google_button"
+                android:layout_width="288dp"
+                android:layout_height="61dp"
+                android:backgroundTint="#00FFFFFF"
+                android:drawableStart="@drawable/googleg_standard_color_18"
+                android:text="@string/google_login"
+                android:textAlignment="center"
+                android:textColor="#455A64"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_login"
+                app:layout_constraintVertical_bias="0.039" />
 
             <EditText
                 android:id="@+id/email"
@@ -212,8 +195,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_login"
-                app:layout_constraintVertical_bias="0.122" />
+                app:layout_constraintTop_toBottomOf="@+id/google_button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -88,7 +88,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/bloque_blanco"
+        android:id="@+id/authLayout"
         android:layout_width="397dp"
         android:layout_height="785dp"
         android:background="@color/white"
