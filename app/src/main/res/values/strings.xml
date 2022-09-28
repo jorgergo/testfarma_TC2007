@@ -48,7 +48,8 @@
     <string name="selecciona_el_estudio">Selecciona el estudio</string>
     <string name="selecciona_la_sucursal">Selecciona la sucursal</string>
     <string name="genera_tu_cita">Genera tu cita</string>
-
+    <!-- Create string for account provider authority -->
+    <string name="provider">Proveedor</string>
     <!--Dropdown_sucursal-->
     <string-array name="sucursal_ar">
         <item>Sucursal A</item>

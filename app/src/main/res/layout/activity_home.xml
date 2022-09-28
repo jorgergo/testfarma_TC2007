@@ -13,7 +13,7 @@
         android:text="Proveedor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_title2" />
+        app:layout_constraintTop_toBottomOf="@+id/provider" />
 
     <TextView
         android:id="@+id/emailTextView"
@@ -25,12 +25,12 @@
         app:layout_constraintTop_toBottomOf="@+id/username_title5" />
 
     <TextView
-        android:id="@+id/password_title2"
+        android:id="@+id/provider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="274dp"
-        android:text="@string/password"
+        android:text="@string/provider"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
