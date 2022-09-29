@@ -117,6 +117,10 @@
     <string name="calle">Calle</string>
     <string name="codigo_postal">Codigo Postal</string>
     <string name="userimg">UserImg</string>
+    <string name="texto1Hist">texto1Hist</string>
+    <string name="historia">historia</string>
+    <string name="texto2Hist">texto2Hist</string>
+    <string name="acerca">acerca</string>
     <string-array name="Regimen">
         <item>A1</item>
         <item>A2</item>
