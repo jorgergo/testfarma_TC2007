@@ -1,21 +1,20 @@
 package com.example.testfarma_app
 
+//import kotlinx.coroutines.tasks.await
+import android.app.DownloadManager
+import android.content.Context
+import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
-import kotlinx.coroutines.withContext
-import java.io.File
-import java.lang.Exception
+
 
 class resultado : AppCompatActivity() {
 
@@ -23,6 +22,7 @@ class resultado : AppCompatActivity() {
     private lateinit var resRecyclerView : RecyclerView
     private lateinit var archArrayList: ArrayList<arch_resultado>
     val resultadosRef =Firebase.storage.reference.child("Resultados")
+    val storageRef = Firebase.storage.reference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,21 +37,52 @@ class resultado : AppCompatActivity() {
 
     }
 
-    private fun downloadFiles(f_name: String) = CoroutineScope(Dispatchers.IO).launch {
+    /*private fun downloadFiles(f_name: String, t_file: String) = CoroutineScope(Dispatchers.IO).launch {
+
+        val storage = FirebaseStorage.getInstance()
+        val ref = storage.reference.child("Resultados/prueba.pdf")
         try {
-            val strVacio = ""
-            val localFile = File.createTempFile(f_name,strVacio)
-            resultadosRef.getFile(localFile).addOnSuccessListener {
-                Toast.makeText(this@resultado, "Archivo descargado",Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener {
-                Toast.makeText(this@resultado,"Algo salio mal",Toast.LENGTH_SHORT).show()
+            val streamSnapshot = Tasks.await(ref.stream)
+            withContext(Dispatchers.Main){
+                Toast.makeText(this@resultado,"Descargaste"+f_name,Toast.LENGTH_SHORT).show()
             }
 
-        } catch (e: Exception){
+            }
+
+        catch (e: Exception){
             withContext(Dispatchers.Main){
                 Toast.makeText(this@resultado,e.message,Toast.LENGTH_SHORT).show()
             }
         }
+    }*/
+
+
+    fun download(f_name: String) {
+        val storageReference = FirebaseStorage.getInstance().reference
+        val ref = storageReference.child("Resultados/$f_name")
+        ref.downloadUrl.addOnSuccessListener { uri ->
+            val url = uri.toString()
+            downloadFiles(this@resultado, "prueba", ".pdf", Environment.DIRECTORY_DOWNLOADS, url)
+        }.addOnFailureListener { }
+    }
+
+    fun downloadFiles(
+        context: Context,
+        fileName: String,
+        fileExtension: String,
+        destinationDirectory: String?,
+        url: String?
+    ) {
+        val downloadManager = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+        val uri = Uri.parse(url)
+        val request = DownloadManager.Request(uri)
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+        request.setDestinationInExternalFilesDir(
+            context,
+            destinationDirectory,
+            fileName + fileExtension
+        )
+        downloadManager.enqueue(request)
     }
 
     private fun getArchdata() {
@@ -72,7 +103,12 @@ class resultado : AppCompatActivity() {
                             //add downloader
                             var nombreFile = archArrayList.get(position).f_name.toString()
                             //Toast.makeText(this@resultado, "clicked item : "+ nombreFile,Toast.LENGTH_SHORT).show()
-                            downloadFiles(nombreFile)
+                            var strStringName = nombreFile.split(".").toTypedArray()
+                            var nombreDarchivo = strStringName[0].toString()
+                            var tipoDarchivo = strStringName[1].toString()
+                            //Toast.makeText(this@resultado, "nombre archivo: "+nombreDarchivo+tipoDarchivo, Toast.LENGTH_SHORT).show()
+                            //downloadFiles(nombreDarchivo,tipoDarchivo)
+                            download(nombreFile)
 
 
 
