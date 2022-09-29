@@ -11,9 +11,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_sign_in.*
-import kotlinx.android.synthetic.main.activity_sign_in.authLayout
 
 class SignIn : AppCompatActivity() {
     private val GOOGLE_SIGN_IN = 100
@@ -42,7 +40,7 @@ override fun onStart() {
         val provider = prefs.getString("provider", null)
         if (email != null && provider != null) {
             authLayout.visibility = View.INVISIBLE
-            showHome(email, ProviderType.valueOf(provider))
+            showHome()
         }
     }
     private fun setup() {
@@ -53,7 +51,7 @@ override fun onStart() {
                     password.text.toString()
                 ).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                        showHome()
                     } else {
                         showAlert()
                     }
@@ -82,13 +80,11 @@ override fun onStart() {
         dialog.show()
     }
 
-    private fun showHome(email: String, provider: ProviderType) {
-        val homeIntent = Intent(this, HomeActivity::class.java).apply {
-            putExtra("email",email)
-            putExtra("provider",provider.name)
+    private fun showHome() {
+        val intent = Intent(this, acercanos::class.java).apply {
         }
-
-        startActivity(homeIntent)
+        startActivity(intent)
+        finish()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -101,7 +97,7 @@ override fun onStart() {
                     val credential = GoogleAuthProvider.getCredential(account.idToken, null)
                     FirebaseAuth.getInstance().signInWithCredential(credential).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            showHome(account.email ?: "", ProviderType.GOOGLE)
+                            showHome()
                         } else {
                             showAlert()
                         }

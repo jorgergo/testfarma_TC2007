@@ -52,7 +52,7 @@ class SignUp : AppCompatActivity() {
                             regUsuario(user.uid)
                         }
 
-                        showHome(it.result?.user?.email ?: "", nombre)
+                        showHome()
 
                     } else {
                         showAlert()
@@ -75,9 +75,9 @@ class SignUp : AppCompatActivity() {
             nombre
         )
         ref.child(uid).setValue(usuario).addOnCompleteListener{
-            Toast.makeText(this, "SI jalo", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Se ha iniciado sesión", Toast.LENGTH_SHORT).show()
         }.addOnFailureListener{err ->
-            Toast.makeText(this, "No jalo ${err.message}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "No se ha iniciado sesión ${err.message}", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -90,13 +90,11 @@ class SignUp : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showHome(email: String, nombre: String) {
-        val homeIntent = Intent(this, HomeActivity::class.java).apply {
-            putExtra("email",email)
-            putExtra("nombre",nombre)
+    private fun showHome() {
+        val intent = Intent(this, acercanos::class.java).apply {
         }
-
-        startActivity(homeIntent)
+        startActivity(intent)
+        finish()
     }
 }
 
