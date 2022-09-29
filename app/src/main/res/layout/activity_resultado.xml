@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".MainActivity_NotSignedIn">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -89,21 +89,24 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/authLayout"
-        android:layout_width="395dp"
-        android:layout_height="730dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontal_nav_bar">
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_nav_bar"
+        app:layout_constraintVertical_bias="0.48000002">
 
         <ScrollView
-            android:layout_width="393dp"
-            android:layout_height="720dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -170,13 +173,13 @@
                 <FrameLayout
                     android:id="@+id/resultadosFL"
                     android:layout_width="match_parent"
-                    android:layout_height="353dp"
+                    android:layout_height="wrap_content"
                     android:background="#c4c4c4">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler_view_res"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="262dp"
                         android:scrollbars="horizontal|vertical"
 
                         app:layoutManager="LinearLayoutManager"
@@ -197,22 +200,27 @@
                 <FrameLayout
                     android:id="@+id/historial_FL"
                     android:layout_width="match_parent"
-                    android:layout_height="73dp"
+                    android:layout_height="318dp"
                     android:background="#c4c4c4">
 
-                    <!-- <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler_view_hist"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_View_Hist"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:scrollbars="vertical"
+                        app:layoutManager="LinearLayoutManager"
+                        tools:listitem="@layout/resultado_layout">
 
-                        app:layoutManager="LinearLayoutManager" /> -->
-                    <TextView
-                        android:id="@+id/textView11"
-                        android:layout_width="352dp"
-                        android:layout_height="match_parent"
-                        android:text="TextView" />
+                    </androidx.recyclerview.widget.RecyclerView>
+
                 </FrameLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sep_amarillo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
+                    android:background="#fbcd23">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
         </ScrollView>
