@@ -2,13 +2,22 @@ package com.example.testfarma_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_reg.*
 
 class SignUp : AppCompatActivity() {
+    val database = Firebase.database
+    val ref = database.getReference("User")
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reg)
 
@@ -21,19 +30,54 @@ class SignUp : AppCompatActivity() {
     }
 
     private fun setup() {
+        auth =  Firebase.auth
         signUpBtn.setOnClickListener {
-            if (editTextEmail.text.isNotEmpty() && editTextPassword.text.isNotEmpty()) {
+
+            val espacioEmail = findViewById<EditText>(R.id.editTextEmail)
+            val espacioNombre = findViewById<EditText>(R.id.editTextName)
+
+            val email = espacioEmail.text.toString()
+            val nombre = espacioNombre.text.toString()
+
+            if (email.isNotEmpty() && editTextPassword.text.isNotEmpty() &&
+                nombre.isNotEmpty()) {
+                val nombre = editTextName.text.toString()
                 FirebaseAuth.getInstance().createUserWithEmailAndPassword(
-                    editTextEmail.text.toString(),
+                    email,
                     editTextPassword.text.toString()
                 ).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                        val user = auth.currentUser
+                        user?.let {
+                            regUsuario(user.uid)
+                        }
+
+                        showHome(it.result?.user?.email ?: "", nombre)
+
                     } else {
                         showAlert()
                     }
                 }
             }
+        }
+    }
+
+    private fun regUsuario(uid: String){
+        val espacioEmail = findViewById<EditText>(R.id.editTextEmail)
+        val espacioNombre = findViewById<EditText>(R.id.editTextName)
+
+        val email = espacioEmail.text.toString()
+        val nombre = espacioNombre.text.toString()
+
+
+        val usuario = User(uid,
+            email,
+            nombre
+        )
+        ref.child(uid).setValue(usuario).addOnCompleteListener{
+            Toast.makeText(this, "SI jalo", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener{err ->
+            Toast.makeText(this, "No jalo ${err.message}", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -46,10 +90,10 @@ class SignUp : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun showHome(email: String, provider: ProviderType) {
+    private fun showHome(email: String, nombre: String) {
         val homeIntent = Intent(this, HomeActivity::class.java).apply {
             putExtra("email",email)
-            putExtra("provider",provider.name)
+            putExtra("nombre",nombre)
         }
 
         startActivity(homeIntent)
