@@ -41,6 +41,9 @@
             android:name=".SignIn"
             android:exported="false" />
         <activity
+            android:name=".acercanos"
+            android:exported="false" />
+        <activity
             android:name=".SignUp"
             android:exported="false" />
         <activity
