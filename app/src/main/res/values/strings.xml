@@ -48,7 +48,14 @@
     <string name="selecciona_el_estudio">Selecciona el estudio</string>
     <string name="selecciona_la_sucursal">Selecciona la sucursal</string>
     <string name="genera_tu_cita">Genera tu cita</string>
+    <string name="user_cita">Citas</string>
+    <string name="estudios">Estudios Disponibles</string>
+    <string name="nom_paciente">Nombre del paciente</string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_vivamus_at_risus_varius_egestas_magna_vel_pretium_diam_phasellus_accumsan_tortor_at_consectetur_congue_elit_ipsum_tempus_sem_vitae_pulvinar_orci_nibh_condimentum_nisl_donec_volutpat_at_massa_et_ultricies_proin_viverra_felis_nulla_et_finibus_augue_tincidunt_non_morbi_maximus_velit_rutrum_eros_ultrices_rhoncus_curabitur_libero_magna_tincidunt_sit_amet_varius_nec_aliquam_nec_erat_phasellus_ultrices_metus_nibh_et_congue_est_lobortis_tincidunt_nam_a_mollis_sem_mauris_lobortis_justo_ut_sapien_interdum_a_fermentum_nisl_maximus_in_et_efficitur_arcu_sed_viverra_neque_proin_interdum_ornare_euismod_phasellus_accumsan_orci_nec_ligula_hendrerit_placerat_donec_id_congue_massa_in_vulputate_mi_a_arcu_dictum_vel_congue_massa_scelerisque">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at risus varius, egestas magna vel, pretium diam. Phasellus accumsan, tortor at consectetur congue, elit ipsum tempus sem, vitae pulvinar orci nibh condimentum nisl. Donec volutpat at massa et ultricies. Proin viverra felis nulla, et finibus augue tincidunt non. Morbi maximus velit rutrum eros ultrices rhoncus. Curabitur libero magna, tincidunt sit amet varius nec, aliquam nec erat. Phasellus ultrices metus nibh, et congue est lobortis tincidunt. Nam a mollis sem. Mauris lobortis justo ut sapien interdum, a fermentum nisl maximus. In et efficitur arcu, sed viverra neque. Proin interdum ornare euismod. Phasellus accumsan orci nec ligula hendrerit placerat. Donec id congue massa. In vulputate mi a arcu dictum, vel congue massa scelerisque.</string>
+    <string name="acerca_de_nosotros">Acerca De Nosotros</string>
 
+    <!-- Create string for account provider authority -->
+    <string name="provider">Proveedor</string>
     <!--Dropdown_sucursal-->
     <string-array name="sucursal_ar">
         <item>Sucursal A</item>
@@ -102,6 +109,14 @@
     <string name="telefono">Teléfono: 55 7081 7720</string>
     <string name="google_login">Iniciar Sesión con Google</string>
     <string name="googleimg">googleimg</string>
+    <string name="userpicture">UserPicture</string>
+    <string name="completar_registro">Complete su registro para acceder a más opciones de la aplicación:</string>
+    <string name="estado">Estado</string>
+    <string name="colonia">Colonia</string>
+    <string name="numero">Numero</string>
+    <string name="calle">Calle</string>
+    <string name="codigo_postal">Codigo Postal</string>
+    <string name="userimg">UserImg</string>
     <string-array name="Regimen">
         <item>A1</item>
         <item>A2</item>

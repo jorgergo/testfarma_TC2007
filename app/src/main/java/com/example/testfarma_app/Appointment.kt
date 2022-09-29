@@ -10,20 +10,18 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testfarma_app.databinding.ActivityApptBinding
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel
-import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
+import androidx.annotation.RequiresApi
+
 
 class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
     private lateinit var binding: ActivityApptBinding
-    private val list = mutableListOf<CarouselItem>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityApptBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val carousel: ImageCarousel = findViewById(R.id.carousel)
-        list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
-        list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
-        carousel.addData(list)
+       
 
         val sucursal = resources.getStringArray(R.array.sucursal_ar)
         val adapter = ArrayAdapter(

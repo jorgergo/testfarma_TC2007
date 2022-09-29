@@ -44,10 +44,13 @@ class MainActivity_NotSignedIn : AppCompatActivity() {
         }
 
         //  ir a la pantalla de carrito
-        carrito_icon.setOnClickListener {
+        /*carrito_icon.setOnClickListener {
             startActivity(Intent(this, carrito::class.java))
 
         }
+
+
+         */
 
 
         /*//  ir a la pantalla de resultado
@@ -58,7 +61,7 @@ class MainActivity_NotSignedIn : AppCompatActivity() {
 
         buttonRes.setOnClickListener {
             startActivity(Intent(this, resultado::class.java))
-        }
+        }*/
 
 
     }

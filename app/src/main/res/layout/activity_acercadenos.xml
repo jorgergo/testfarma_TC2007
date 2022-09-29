@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="393dp"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout5"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_marginEnd="2dp"
+        android:background="#FFEB3B"
+        android:foregroundTint="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="301dp"
+        android:layout_height="52dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="376dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_vivamus_at_risus_varius_egestas_magna_vel_pretium_diam_phasellus_accumsan_tortor_at_consectetur_congue_elit_ipsum_tempus_sem_vitae_pulvinar_orci_nibh_condimentum_nisl_donec_volutpat_at_massa_et_ultricies_proin_viverra_felis_nulla_et_finibus_augue_tincidunt_non_morbi_maximus_velit_rutrum_eros_ultrices_rhoncus_curabitur_libero_magna_tincidunt_sit_amet_varius_nec_aliquam_nec_erat_phasellus_ultrices_metus_nibh_et_congue_est_lobortis_tincidunt_nam_a_mollis_sem_mauris_lobortis_justo_ut_sapien_interdum_a_fermentum_nisl_maximus_in_et_efficitur_arcu_sed_viverra_neque_proin_interdum_ornare_euismod_phasellus_accumsan_orci_nec_ligula_hendrerit_placerat_donec_id_congue_massa_in_vulputate_mi_a_arcu_dictum_vel_congue_massa_scelerisque"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout8" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout8"
+        android:layout_width="393dp"
+        android:layout_height="70dp"
+        android:background="#FFEB3B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:elegantTextHeight="false"
+        android:shadowColor="#090808"
+        android:text="@string/acerca_de_nosotros"
+        android:textColor="#282828"
+        android:textColorHighlight="#303030"
+        android:textColorHint="#2E2E2E"
+        android:textColorLink="#1E1E1E"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="360dp"
+        android:layout_height="189dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:srcCompat="@drawable/imagen_ejemplouno"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
