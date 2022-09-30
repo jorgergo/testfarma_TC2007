@@ -121,6 +121,7 @@
     <string name="historia">historia</string>
     <string name="texto2Hist">texto2Hist</string>
     <string name="acerca">acerca</string>
+    <string name="text1Ace">Testfarma nace para cubrir la necesidad de ir más allá en la venta y distribución de insumos médicos y pruebas de diagnóstico clínico, así como de productos farmacéuticos.</string>
     <string-array name="Regimen">
         <item>A1</item>
         <item>A2</item>

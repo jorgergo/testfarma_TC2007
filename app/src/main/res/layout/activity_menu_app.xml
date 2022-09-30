@@ -8,21 +8,6 @@
 
     tools:context=".MainActivity_NotSignedIn">
 
-    <ImageButton
-        android:id="@+id/menu"
-        android:layout_width="53dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/menu"
-        android:contentDescription="@string/menu"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck"
-        tools:layout_conversion_absoluteHeight="40dp"
-        tools:layout_conversion_absoluteWidth="40dp" />
-
     <Button
         android:id="@+id/btn_citas"
         android:layout_width="393dp"
@@ -81,10 +66,10 @@
 
     <ImageButton
         android:id="@+id/logo"
-        android:layout_width="233dp"
-        android:layout_height="48dp"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="96dp"
         android:background="@drawable/logo"
         android:contentDescription="@string/logo"
         android:foregroundGravity="center|center_horizontal"
