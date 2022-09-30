@@ -33,6 +33,11 @@ class Promotions: AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        menu.setOnClickListener {
+            val intent = Intent(this, MenuApp::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
 }

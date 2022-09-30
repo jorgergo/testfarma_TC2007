@@ -2,6 +2,7 @@ package com.example.testfarma_app
 
 import android.app.DownloadManager
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -13,6 +14,7 @@ import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
+import kotlinx.android.synthetic.main.activity_resultado.*
 
 
 class resultado : AppCompatActivity() {
@@ -39,6 +41,12 @@ class resultado : AppCompatActivity() {
 
         archArrayList = arrayListOf<arch_resultado>()
         getArchdata()
+
+        menu.setOnClickListener {
+            val intent = Intent(this, MenuApp::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
 

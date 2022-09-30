@@ -40,6 +40,11 @@ class estudio : AppCompatActivity(), estudio_adapter.OnEstudioClickListener {
             startActivity(intent)
             finish()
         }
+        menu.setOnClickListener {
+            val intent = Intent(this, MenuApp::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
     private fun setupRecyclerView() {
         val linkIcono_mas = "https://cdn-icons-png.flaticon.com/128/0/517.png"

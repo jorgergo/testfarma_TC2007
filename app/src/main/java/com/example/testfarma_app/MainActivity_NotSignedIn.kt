@@ -55,7 +55,5 @@ class MainActivity_NotSignedIn : AppCompatActivity() {
         buttonRes.setOnClickListener {
             startActivity(Intent(this, resultado::class.java))
         }*/
-
-
     }
 }
