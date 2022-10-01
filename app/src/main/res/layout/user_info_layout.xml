@@ -19,33 +19,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/carrito_icon"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/carrito_icon"
-            android:contentDescription="@string/carrito"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.517"
-            tools:layout_conversion_absoluteHeight="40dp"
-            tools:layout_conversion_absoluteWidth="40dp" />
-
-        <ImageButton
             android:id="@+id/perfil"
             android:layout_width="35dp"
             android:layout_height="42dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/perfil"
             android:contentDescription="@string/perfil"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/carrito_icon"
-            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="40dp"
             tools:layout_conversion_absoluteWidth="40dp" />
 
@@ -53,18 +37,17 @@
             android:id="@+id/menu"
             android:layout_width="40dp"
             android:layout_height="35dp"
-            android:layout_marginStart="14dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="3dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/menu"
             android:contentDescription="@string/menu"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.533"
+            tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="40dp"
             tools:layout_conversion_absoluteWidth="40dp" />
 
@@ -72,9 +55,8 @@
             android:id="@+id/logo"
             android:layout_width="200dp"
             android:layout_height="42dp"
-            android:layout_marginStart="2dp"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginEnd="32dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/logo"
             android:contentDescription="@string/logo"
@@ -82,8 +64,10 @@
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/perfil"
+            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toEndOf="@+id/menu"
             app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="70dp"
             tools:layout_conversion_absoluteWidth="245dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -96,222 +80,173 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_nav_bar">
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_nav_bar"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/authLayout"
             android:layout_width="0dp"
             android:layout_height="650dp"
-            android:layout_marginBottom="30dp"
             android:background="@color/white"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:contentDescription="@string/userimg"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                tools:ignore="SpeakableTextPresentCheck">
+                app:srcCompat="@drawable/user_icon" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imageView9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:contentDescription="@string/userimg"
-                        app:srcCompat="@drawable/user_icon" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:hint="@string/nom_paciente"
-                        android:inputType="textPersonName"
-                        android:minHeight="48dp"
-                        tools:ignore="TextContrastCheck" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:hint="@string/username"
-                        android:inputType="textPersonName"
-                        android:minHeight="48dp"
-                        android:textColorHint="#78909C" />
-
-                    <EditText
-                        android:id="@+id/editTextPhone2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:hint="@string/telefono"
-                        android:inputType="phone"
-                        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
-
-                    <EditText
-                        android:id="@+id/editTextTextEmailAddress2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:hint="@string/email"
-                        android:inputType="textEmailAddress"
-                        android:minHeight="48dp"
-                        tools:ignore="TextContrastCheck" />
-
-                    <TextView
-                        android:id="@+id/textView26"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/completar_registro"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/textView27"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/RFC"
-                        android:textAllCaps="false"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                    <TextView
-                        android:id="@+id/textView28"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/estado"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName14"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                    <TextView
-                        android:id="@+id/textView29"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/codigo_postal"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPostalAddress2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:inputType="textPostalAddress"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                    <TextView
-                        android:id="@+id/textView30"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/colonia"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName15"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                    <TextView
-                        android:id="@+id/textView31"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/calle"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName16"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                    <TextView
-                        android:id="@+id/textView32"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/numero"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/editTextNumber"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:inputType="number"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                </LinearLayout>
-            </ScrollView>
-
-            <Button
-                android:id="@+id/buttonfac"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/Send"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <EditText
+                android:id="@+id/nom_paciente"
+                android:layout_width="302dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="16dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/nom_paciente"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="TextContrastCheck" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/email_user_info"
+                android:layout_width="302dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nom_paciente"
+                tools:ignore="TouchTargetSizeCheck"
+                android:autofillHints="" />
+
+            <TextView
+                android:id="@+id/acerca_de"
+                android:layout_width="352dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/completar_registro"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_user_info" />
+
+            <EditText
+                android:id="@+id/rfc"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="@string/ingrese_su_rfc"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/acerca_de"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/estado"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="@string/ingrese_su_estado"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rfc"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/cod_post"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="@string/ingrese_su_codigo_postal"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/estado"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/colonia"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="@string/ingrese_su_colonia"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cod_post"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/calle"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="@string/ingrese_su_calle"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/colonia"
+                tools:ignore="TouchTargetSizeCheck"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/numero"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="@string/ingrese_el_numero"
+                android:inputType="textPersonName"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calle"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+                android:autofillHints="" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
