@@ -29,6 +29,16 @@ class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
             startActivity(intent)
             finish()
         }
+        carrito_icon.setOnClickListener {
+            val intent = Intent(this, carrito::class.java)
+            startActivity(intent)
+            finish()
+        }
+        perfil.setOnClickListener {
+            val intent = Intent(this, UserInfo::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val sucursal = resources.getStringArray(R.array.sucursal_ar)
         val adapter = ArrayAdapter(

@@ -50,13 +50,13 @@
             android:name=".Appointment"
             android:exported="false" />
         <activity
-            android:name=".MenuApp"
+            android:name=".MainActivity_NotSignedIn"
             android:exported="false" />
         <activity
             android:name=".Promotions"
             android:exported="false" />
         <activity
-            android:name=".MainActivity_NotSignedIn"
+            android:name=".MenuApp"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

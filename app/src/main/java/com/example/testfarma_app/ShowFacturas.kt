@@ -15,8 +15,14 @@ class ShowFacturas: AppCompatActivity() {
 
         setContentView(R.layout.show_facturas_layout)
 
-        back.setOnClickListener {
-            val intent = Intent(this, MainActivity_NotSignedIn::class.java)
+        menu.setOnClickListener {
+            val intent = Intent(this, MenuApp::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        carrito_icon.setOnClickListener {
+            val intent = Intent(this, carrito::class.java)
             startActivity(intent)
             finish()
         }

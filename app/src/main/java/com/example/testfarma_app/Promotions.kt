@@ -28,13 +28,14 @@ class Promotions: AppCompatActivity() {
 
         setContentView(R.layout.promo_layout)
 
-        back.setOnClickListener {
-            val intent = Intent(this, MainActivity_NotSignedIn::class.java)
+        menu.setOnClickListener {
+            val intent = Intent(this, MenuApp::class.java)
             startActivity(intent)
             finish()
         }
-        menu.setOnClickListener {
-            val intent = Intent(this, MenuApp::class.java)
+
+        carrito_icon.setOnClickListener {
+            val intent = Intent(this, carrito::class.java)
             startActivity(intent)
             finish()
         }
