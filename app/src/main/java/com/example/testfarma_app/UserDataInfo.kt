@@ -1,17 +1,26 @@
 package com.example.testfarma_app
 
+import android.app.Dialog
+import android.net.Uri
 import android.os.Bundle
+import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testfarma_app.databinding.UserInfoLayoutBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 
 class UserDataInfo:  AppCompatActivity() {
     private lateinit var binding : UserInfoLayoutBinding
     private lateinit var auth : FirebaseAuth
     private lateinit var databaseReference: DatabaseReference
+    private lateinit var storageReference: StorageReference
+    private lateinit var imageUri: Uri
+    private lateinit var dialog: Dialog
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = UserInfoLayoutBinding.inflate(layoutInflater)
@@ -19,7 +28,10 @@ class UserDataInfo:  AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         val uid = auth.currentUser?.uid
         databaseReference = FirebaseDatabase.getInstance().getReference("UserData")
+
         binding.btnGuardarDatos.setOnClickListener {
+
+            showProgressBar()
             val nombre = binding.nomPaciente.text.toString()
             val email = binding.emailUserInfo.text.toString()
             val rfc = binding.rfc.text.toString()
@@ -35,6 +47,7 @@ class UserDataInfo:  AppCompatActivity() {
                     if (it.isSuccessful){
                         uploadProfilePic()
                     }else{
+                        hideProgressBar()
                         Toast.makeText(this@UserDataInfo, "Failed to update profile", Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -43,6 +56,24 @@ class UserDataInfo:  AppCompatActivity() {
     }
 
     private fun uploadProfilePic() {
-        TODO("Not yet implemented")
+        imageUri=Uri.parse("androud.resource://$packageName/${R.drawable.user_icon}")
+        storageReference = FirebaseStorage.getInstance().getReference("Users/"+auth.currentUser?.uid)
+        storageReference.putFile(imageUri).addOnSuccessListener {
+            hideProgressBar()
+            Toast.makeText(this@UserDataInfo, "Profile succesfuly updated", Toast.LENGTH_SHORT).show()
+        }.addOnFailureListener{
+            hideProgressBar()
+            Toast.makeText(this@UserDataInfo, "Failed to upload the image", Toast.LENGTH_SHORT).show()
+        }
+    }
+    private fun showProgressBar(){
+        dialog = Dialog(this@UserDataInfo)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(R.layout.dialog_wait)
+        dialog.setCanceledOnTouchOutside(false)
+        dialog.show()
+    }
+    private fun hideProgressBar(){
+        dialog.dismiss()
     }
 }
