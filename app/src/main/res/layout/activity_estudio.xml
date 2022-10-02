@@ -2,11 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout3"
+    android:id="@+id/estudio_relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".MainActivity_NotSignedIn">
+    tools:context=".estudio">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/horizontal_nav_bar"
@@ -149,9 +149,9 @@
                         app:layout_constraintTop_toBottomOf="@+id/estudio_titulo" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/resultados_rec"
-                        android:layout_width="391dp"
-                        android:layout_height="390dp">
+                        android:id="@+id/estudio_rec"
+                        android:layout_width="match_parent"
+                        android:layout_height="459dp">
 
                     </androidx.recyclerview.widget.RecyclerView>
 

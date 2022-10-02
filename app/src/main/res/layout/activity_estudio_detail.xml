@@ -139,15 +139,26 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="43dp"
-                    android:layout_height="44dp"
-                    android:layout_marginTop="76dp"
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="84dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Disponibilidad:"
+                    android:textColor="#FFFFFF"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/popup_window_text1"
-                    app:layout_constraintTop_toBottomOf="@+id/popup_window_title"
-                    card_view:srcCompat="@drawable/addcarrito_icon" />
+                    app:layout_constraintTop_toBottomOf="@+id/popup_window_title" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="43dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="36dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12"
+                    card_view:srcCompat="@drawable/disponible" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

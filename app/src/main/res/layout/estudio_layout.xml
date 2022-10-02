@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/resultados_rec"
+    android:id="@+id/estudio_rec"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
@@ -24,6 +24,7 @@
             android:layout_height="48dp"
             android:fontFamily="sans-serif"
             android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Estudio sangre" />
@@ -38,6 +39,7 @@
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@+id/estudio_des"
             android:text="$1243"
+            android:textStyle="bold"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             app:layout_constraintHorizontal_weight="1"
@@ -54,6 +56,7 @@
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@+id/estudio_des"
             android:text="$"
+            android:textStyle="bold"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             card_view:layout_constraintHorizontal_weight="1"
@@ -62,14 +65,36 @@
 
         <ImageView
             android:id="@+id/estudio_mas"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="85dp"
+            android:layout_width="58dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginLeft="65dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="24dp"
-            android:layout_toEndOf="@+id/estudio_price"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="35dp"
             card_view:srcCompat="@android:drawable/ic_input_add" />
+
+        <TextView
+            android:id="@+id/estudio_reque"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/estudio_des"
+            android:layout_marginTop="14dp"
+            android:text="Requerimiento: asdasdasdasdasdasdasd"
+            android:textAlignment="textStart"
+
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/estudio_dispo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/estudio_reque"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="17dp"
+            android:text="Disponibilidad:"
+            android:textColor="#FFFFFF" />
 
     </RelativeLayout>
 
