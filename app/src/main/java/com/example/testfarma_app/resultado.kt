@@ -48,7 +48,7 @@ class resultado : AppCompatActivity() {
             finish()
         }
         perfil.setOnClickListener {
-            val intent = Intent(this, UserInfo::class.java)
+            val intent = Intent(this, UserDataInfo::class.java)
             startActivity(intent)
             finish()
         }
