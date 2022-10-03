@@ -56,6 +56,9 @@
             android:name=".Promotions"
             android:exported="false" />
         <activity
+            android:name=".UserDataInfo"
+            android:exported="false" />
+        <activity
             android:name=".MenuApp"
             android:exported="true">
             <intent-filter>

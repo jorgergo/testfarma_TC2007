@@ -1,6 +1,7 @@
 package com.example.testfarma_app
 
 import android.app.Dialog
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.Window
@@ -12,6 +13,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import kotlinx.android.synthetic.main.activity_appt.*
 
 class UserDataInfo:  AppCompatActivity() {
     private lateinit var binding : UserInfoLayoutBinding
@@ -25,9 +27,16 @@ class UserDataInfo:  AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = UserInfoLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         auth = FirebaseAuth.getInstance()
         val uid = auth.currentUser?.uid
         databaseReference = FirebaseDatabase.getInstance().getReference("UserData")
+
+        menu.setOnClickListener {
+            val intent = Intent(this, MenuApp::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         binding.btnGuardarDatos.setOnClickListener {
 

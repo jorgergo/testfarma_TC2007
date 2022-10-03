@@ -82,8 +82,8 @@
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="135dp"
-                android:layout_height="135dp"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
                 android:contentDescription="@string/userimg"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
