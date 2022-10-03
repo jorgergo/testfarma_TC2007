@@ -46,23 +46,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"></TextView>
 
-        <TextView
-            android:id="@+id/signo"
-            style="@style/Widget.Inventory.ListItemTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="-4dp"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@+id/estudio_des"
-            android:text="$"
-            android:textStyle="bold"
-            android:textAlignment="textStart"
-            android:textColor="@color/white"
-            card_view:layout_constraintHorizontal_weight="1"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent"></TextView>
-
         <ImageView
             android:id="@+id/estudio_mas"
             android:layout_width="58dp"
