@@ -11,14 +11,14 @@
         android:id="@+id/cancelarReg"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="116dp"
         android:text="@string/back"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.292" />
 
     <ImageButton
         android:id="@+id/logo2"
@@ -46,6 +46,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="14dp"
         android:autofillHints=""
         android:backgroundTint="#000000"
         android:ems="10"
@@ -53,6 +54,8 @@
         android:hint="@string/ingresa_t_correo_el"
         android:inputType="textEmailAddress"
         android:textColorHint="#3C3C3C"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username_title2" />
 
@@ -62,10 +65,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="198dp"
         android:text="@string/nombre_completo"
         android:textColor="#020202"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
@@ -75,10 +80,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="260dp"
         android:text="@string/password"
         android:textColor="#020202"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
@@ -86,12 +93,14 @@
         android:id="@+id/username_title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="304dp"
         android:text="@string/email"
         android:textColor="#020202"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
@@ -101,6 +110,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="14dp"
         android:autofillHints=""
         android:backgroundTint="#000000"
         android:ems="10"
@@ -108,6 +118,7 @@
         android:inputType="textPersonName"
         android:textColor="#3C3C3C"
         android:textColorHint="#303030"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username_title3"
         tools:ignore="DuplicateSpeakableTextCheck" />
@@ -118,12 +129,15 @@
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="14dp"
         android:autofillHints=""
         android:backgroundTint="#000000"
         android:ems="10"
         android:hint="@string/crea_tu_contrase_a"
         android:inputType="textPassword"
         android:textColorHint="#3C3C3C"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username_title4" />
 
@@ -132,13 +146,14 @@
         android:layout_width="288dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="52dp"
         android:text="@string/registrarse"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordCha" />
 
     <TextView
         android:id="@+id/textView5"
@@ -153,11 +168,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
 
+    <TextView
+        android:id="@+id/passwordCha"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/charac"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
     <FrameLayout
         android:id="@+id/frameLayout2"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="60dp"
         android:background="#FFC107"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -167,12 +194,11 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="395dp"
+        android:layout_width="0dp"
         android:layout_height="64dp"
         android:background="#FFC107"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.100000024">
