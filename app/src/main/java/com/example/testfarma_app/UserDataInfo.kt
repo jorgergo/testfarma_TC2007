@@ -66,7 +66,7 @@ class UserDataInfo:  AppCompatActivity() {
 
     private fun uploadProfilePic() {
         imageUri=Uri.parse("androud.resource://$packageName/${R.drawable.user_icon}")
-        storageReference = FirebaseStorage.getInstance().getReference("Users/"+auth.currentUser?.uid)
+        storageReference = FirebaseStorage.getInstance().getReference("User/"+auth.currentUser?.uid)
         storageReference.putFile(imageUri).addOnSuccessListener {
             hideProgressBar()
             Toast.makeText(this@UserDataInfo, "Profile succesfuly updated", Toast.LENGTH_SHORT).show()
