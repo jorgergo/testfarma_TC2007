@@ -32,16 +32,12 @@ class UserDataInfo:  AppCompatActivity() {
 
         binding.btnGuardarDatos.setOnClickListener {
 
-            val nombre = binding.nomPaciente.text.toString()
-            val email = binding.emailUserInfo.text.toString()
-            val rfc = binding.rfc.text.toString()
-            val estado = binding.estado.text.toString()
-            val codigoPostal = binding.codPost.text.toString()
-            val colonia = binding.colonia.text.toString()
-            val calle = binding.calle.text.toString()
-            val numero = binding.numero.text.toString()
+            val telefono = binding.telefono.text.toString()
+            val fechaNac = binding.fechaNac.text.toString()
+            val estatura = binding.estatura.text.toString()
+            val peso = binding.peso.text.toString()
 
-            val userData = UserData(nombre,email,rfc, estado, codigoPostal, colonia, calle, numero)
+            val userData = UserData(telefono, fechaNac, estatura, peso)
             if(uid != null){
                 databaseReference.child(uid).setValue(userData).addOnSuccessListener {
                     Toast.makeText(this, "Registro de perfil exitoso",Toast.LENGTH_SHORT).show()
