@@ -60,7 +60,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username_title2" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreText" />
 
     <TextView
         android:id="@+id/username_title3"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
     <TextView
-        android:id="@+id/username_title2"
+        android:id="@+id/nombreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"

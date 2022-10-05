@@ -62,6 +62,7 @@ class SignUp : AppCompatActivity() {
                             }
 
                             showHome()
+                            showData(it.result?.user?.email ?: "", nombre)
 
                         } else {
                             showAlert()
@@ -120,7 +121,6 @@ class SignUp : AppCompatActivity() {
         val email = espacioEmail.text.toString()
         val nombre = espacioNombre.text.toString()
 
-
         val usuario = User(uid,
             email,
             nombre
@@ -146,6 +146,14 @@ class SignUp : AppCompatActivity() {
         }
         startActivity(intent)
         finish()
+    }
+
+    private fun showData(email: String, nombre: String) {
+
+        val intent = Intent(this, UserDataInfo::class.java).apply {
+            putExtra("email", email)
+            putExtra("nombre", nombre)
+        }
     }
 }
 
