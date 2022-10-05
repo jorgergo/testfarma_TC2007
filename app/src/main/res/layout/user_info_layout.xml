@@ -80,33 +80,25 @@
             app:layout_constraintTop_toTopOf="parent">
 
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="105dp"
-                android:layout_height="105dp"
-                android:contentDescription="@string/userimg"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/user_icon" />
-
             <TextView
                 android:id="@+id/textNomUser"
                 android:layout_width="302dp"
                 android:layout_height="36dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+                app:layout_constraintTop_toBottomOf="@+id/nombreText" />
 
             <TextView
                 android:id="@+id/textEmail"
                 android:layout_width="302dp"
                 android:layout_height="36dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textNomUser" />
+                app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
             <TextView
                 android:id="@+id/acerca_de"
@@ -123,30 +115,35 @@
 
             <EditText
                 android:id="@+id/telefono"
-                android:layout_width="352dp"
-                android:layout_height="36dp"
-                android:layout_marginTop="16dp"
+                android:layout_width="349dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="@string/ingrese_su_telefono"
-                android:inputType="textPersonName"
-                android:textSize="16sp"
+                android:hint="Telefono"
+                android:inputType="textPersonName|textEmailAddress"
+                android:textColorHighlight="#FFC107"
+                android:textColorLink="#FBCD23"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/acerca_de"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <EditText
                 android:id="@+id/fechaNac"
-                android:layout_width="352dp"
-                android:layout_height="36dp"
-                android:layout_marginTop="16dp"
+                android:layout_width="349dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="@string/ingrese_su_fecha_de_nacimiento"
-                android:inputType="textPersonName"
-                android:textSize="16sp"
+                android:hint="Fecha de Nacimiento"
+                android:inputType="textPersonName|textEmailAddress"
+                android:textColorHighlight="#FFC107"
+                android:textColorLink="#FBCD23"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
@@ -155,14 +152,17 @@
 
             <EditText
                 android:id="@+id/estatura"
-                android:layout_width="352dp"
-                android:layout_height="36dp"
-                android:layout_marginTop="16dp"
+                android:layout_width="349dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="@string/ingrese_su_estatura"
-                android:inputType="textPersonName"
-                android:textSize="16sp"
+                android:hint="Estatura"
+                android:inputType="textPersonName|textEmailAddress"
+                android:textColorHighlight="#FFC107"
+                android:textColorLink="#FBCD23"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
@@ -171,14 +171,17 @@
 
             <EditText
                 android:id="@+id/peso"
-                android:layout_width="352dp"
-                android:layout_height="36dp"
-                android:layout_marginTop="16dp"
+                android:layout_width="349dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="@string/ingrese_su_peso"
-                android:inputType="textPersonName"
-                android:textSize="16sp"
+                android:hint="Peso"
+                android:inputType="textPersonName|textEmailAddress"
+                android:textColorHighlight="#FFC107"
+                android:textColorLink="#FBCD23"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
@@ -194,6 +197,36 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/nombreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="287dp"
+                android:text="@string/nombre"
+                android:textColor="#020202"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/emailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="287dp"
+                android:text="@string/email"
+                android:textColor="#020202"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNomUser" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

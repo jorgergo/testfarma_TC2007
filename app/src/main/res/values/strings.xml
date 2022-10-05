@@ -7,6 +7,7 @@
     <string name="carrito">carrito</string>
     <string name="iniciar_sesion">Iniciar sesión</string>
     <string name="registrate">Regístrate</string>
+    <string name="nombre">Nombre</string>
     <string name="email">Correo</string>
     <string name="no_tienes_una_cuenta">¿No tienes una cuenta?</string>
     <string name="o">Ó</string>
