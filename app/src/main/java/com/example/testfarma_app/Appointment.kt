@@ -29,11 +29,6 @@ class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
             startActivity(intent)
             finish()
         }
-        carrito_icon.setOnClickListener {
-            val intent = Intent(this, Carrito::class.java)
-            startActivity(intent)
-            finish()
-        }
         perfil.setOnClickListener{
             val intent = Intent(this, UserDataInfo::class.java)
             startActivity(intent)

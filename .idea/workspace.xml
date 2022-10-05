@@ -25,6 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bca642b-3aff-4ec6-ac9b-c1b5838c84ff" name="Changes" comment="Feat: Added activity_acercadenos.xml&#10;&#10;Fix: Made project adjustments.">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/listener/IDEstudioListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/utils/SpaceItemDecoration.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/disponible.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
@@ -107,7 +110,6 @@
         <option value="layoutResourceFile" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -129,7 +131,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2DoKNMESf49i0WYX2gRy7cMZA8g" />
   <component name="ProjectLevelVcsManager">
