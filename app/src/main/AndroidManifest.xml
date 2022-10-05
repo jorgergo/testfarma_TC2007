@@ -32,7 +32,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".carrito"
+            android:name=".Carrito"
             android:exported="false" />
         <activity
             android:name=".estudio"

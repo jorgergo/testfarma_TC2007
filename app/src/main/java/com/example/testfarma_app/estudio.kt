@@ -36,13 +36,20 @@ class estudio : AppCompatActivity(), IDEstudioListener,  CarritoLoadListener{
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
-    public fun onUpdateCartEvent(event: UpdateCartEvent){
+    fun onUpdateCartEvent(event: UpdateCartEvent){
         countCartFromFirebase()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estudio)
+
+        irCarrito.setOnClickListener {
+            val intent = Intent(this, Carrito::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         menu.setOnClickListener {
             val intent = Intent(this, MenuApp::class.java)
             startActivity(intent)
@@ -124,6 +131,6 @@ class estudio : AppCompatActivity(), IDEstudioListener,  CarritoLoadListener{
 
     override fun onLoadCartFailed(message: String?) {
 
-        Snackbar.make(findViewById(R.id.carrito_relativeLayout),message!!, Snackbar.LENGTH_LONG).show()
+        Snackbar.make(findViewById(R.id.estudio_relativeLayout),message!!, Snackbar.LENGTH_LONG).show()
     }
 }
