@@ -65,22 +65,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/google_button"
-                android:layout_width="288dp"
-                android:layout_height="61dp"
-                android:backgroundTint="#00FFFFFF"
-                android:drawableStart="@drawable/googleg_standard_color_18"
-                android:text="@string/google_login"
-                android:textAlignment="center"
-                android:textColor="#455A64"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_login"
-                app:layout_constraintVertical_bias="0.039" />
-
             <EditText
                 android:id="@+id/email"
                 android:layout_width="349dp"
@@ -88,7 +72,7 @@
                 android:layout_marginTop="12dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Email"
+                android:hint="@string/email1"
                 android:inputType="textPersonName|textEmailAddress"
                 android:textColorHighlight="#FFC107"
                 android:textColorLink="#FBCD23"
@@ -145,7 +129,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="12dp"
                 android:ems="10"
-                android:hint="Contraseña"
+                android:hint="@string/contrase_a"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -177,8 +161,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/google_button"
-                app:layout_constraintVertical_bias="0.052" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
