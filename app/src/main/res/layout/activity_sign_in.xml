@@ -94,7 +94,7 @@
                 android:textColorLink="#FBCD23"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/username_title"
+                app:layout_constraintTop_toBottomOf="@+id/correoUsuario"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -126,11 +126,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/email" />
 
             <TextView
-                android:id="@+id/username_title"
+                android:id="@+id/correoUsuario"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="29dp"
-                android:text="@string/username"
+                android:text="@string/email"
                 android:textColor="#020202"
                 android:textSize="20sp"
                 android:textStyle="bold"
