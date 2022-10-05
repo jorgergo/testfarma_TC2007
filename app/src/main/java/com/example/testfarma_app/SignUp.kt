@@ -31,6 +31,12 @@ class SignUp : AppCompatActivity() {
             finish()
         }
         setup()
+
+        Politicas_priv.setOnClickListener {
+            val intent = Intent(this, Poliitcasprivacidad::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun setup() {
