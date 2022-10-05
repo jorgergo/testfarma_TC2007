@@ -22,7 +22,7 @@ class ShowFacturas: AppCompatActivity() {
         }
 
         carrito_icon.setOnClickListener {
-            val intent = Intent(this, carrito::class.java)
+            val intent = Intent(this, Carrito::class.java)
             startActivity(intent)
             finish()
         }

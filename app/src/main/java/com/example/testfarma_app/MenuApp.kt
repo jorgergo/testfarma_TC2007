@@ -23,7 +23,7 @@ class MenuApp : AppCompatActivity() {
         }
 
         btn_estudios.setOnClickListener{
-            val intent = Intent(this, carrito::class.java)
+            val intent = Intent(this, Carrito::class.java)
             startActivity(intent)
             finish()
         }
