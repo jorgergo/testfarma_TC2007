@@ -32,7 +32,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".carrito"
+            android:name=".Carrito"
             android:exported="false" />
         <activity
             android:name=".estudio"
@@ -48,6 +48,15 @@
             android:exported="false" />
         <activity
             android:name=".Appointment"
+            android:exported="false" />
+        <activity
+            android:name=".MenuApp"
+            android:exported="false" />
+        <activity
+            android:name=".Promotions"
+            android:exported="false" />
+        <activity
+            android:name=".UserDataInfo"
             android:exported="false" />
         <activity
             android:name=".MainActivity_NotSignedIn"

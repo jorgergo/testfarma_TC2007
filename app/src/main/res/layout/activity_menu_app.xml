@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity_NotSignedIn">
+
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/menu"
+        android:contentDescription="@string/menu"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:layout_conversion_absoluteHeight="40dp"
+        tools:layout_conversion_absoluteWidth="40dp" />
+
+    <Button
+        android:id="@+id/btn_citas"
+        android:layout_width="393dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#c4c4c4"
+        android:text="Citas"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/btn_estudios"
+        android:layout_width="393dp"
+        android:layout_height="51dp"
+        android:backgroundTint="#c4c4c4"
+        android:text="Estudios disponibles"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_resultados" />
+
+    <Button
+        android:id="@+id/btn_nosotros"
+        android:layout_width="393dp"
+        android:layout_height="51dp"
+        android:backgroundTint="#c4c4c4"
+        android:text="A cerca de nosotros"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_promo" />
+
+    <Button
+        android:id="@+id/btn_carrito"
+        android:layout_width="393dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="51dp"
+        android:backgroundTint="@color/colorPrimaryVariant"
+        android:text="@string/carrito"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_nosotros" />
+
+    <Button
+        android:id="@+id/btn_resultados"
+        android:layout_width="393dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="@color/colorPrimaryVariant"
+        android:text="Resultados"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_citas"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btn_promo"
+        android:layout_width="393dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="1dp"
+        android:backgroundTint="@color/colorPrimaryVariant"
+        android:text="Promociones"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_estudios" />
+
+    <ImageButton
+        android:id="@+id/logo"
+        android:layout_width="199dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/logo"
+        android:contentDescription="@string/logo"
+        android:foregroundGravity="center|center_horizontal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:layout_conversion_absoluteHeight="70dp"
+        tools:layout_conversion_absoluteWidth="245dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

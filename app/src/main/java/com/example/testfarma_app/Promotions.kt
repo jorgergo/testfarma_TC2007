@@ -28,8 +28,14 @@ class Promotions: AppCompatActivity() {
 
         setContentView(R.layout.promo_layout)
 
-        back.setOnClickListener {
-            val intent = Intent(this, MainActivity_NotSignedIn::class.java)
+        menu.setOnClickListener {
+            val intent = Intent(this, MenuApp::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        perfil.setOnClickListener {
+            val intent = Intent( this, UserDataInfo::class.java)
             startActivity(intent)
             finish()
         }

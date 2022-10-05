@@ -24,21 +24,21 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bca642b-3aff-4ec6-ac9b-c1b5838c84ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/acercanos.kt" afterDir="false" />
+    <list default="true" id="8bca642b-3aff-4ec6-ac9b-c1b5838c84ff" name="Changes" comment="Feat: Added activity_acercadenos.xml&#10;&#10;Fix: Made project adjustments.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/MainActivity_NotSignedIn.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/MainActivity_NotSignedIn.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/SignIn.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/SignIn.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/SignUp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/SignUp.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/UserData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/UserData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/UserDataInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/testfarma_app/UserDataInfo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_reg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/user_info_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/user_info_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\user\.android\avd\Pixel_5_API_31.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\jolop\.android\avd\Pixel_5_API_31.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -110,7 +110,9 @@
       <list>
         <option value="valueResourceFile" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -132,7 +134,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2DoKNMESf49i0WYX2gRy7cMZA8g" />
   <component name="ProjectLevelVcsManager">
@@ -156,7 +158,7 @@
     <property name="destination" value="DRAWABLE" />
     <property name="format" value="PNG" />
     <property name="lastFolderRoot" value="$USER_HOME$/Downloads/5847f9cbcef1014c0b5e48c8.png" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-mdpi" />
     <property name="method" value="Automatic" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -167,6 +169,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Documents\GitHub\testfarma_TC2007\app\src\main\res\drawable-mdpi" />
+      <recent name="C:\Users\user\Documents\GitHub\testfarma_TC2007\app\src\main\res\drawable-hdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="D:\Principal\Escuela\Actual\TEC\semestre5\Integracion_d_seguridad\reto\testfarma_TC2007\app\src\main\res\layout" />
@@ -179,6 +183,9 @@
     </key>
     <key name="android.template.501524429">
       <recent name="com.example.testfarma_app" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.testfarma_app.utils" />
     </key>
     <key name="android.template.1498659143">
       <recent name="com.example.testfarma_app" />
@@ -197,6 +204,7 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -236,6 +244,7 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
         <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+        <option name="PROFILING_MODE" value="NOT_SET" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />

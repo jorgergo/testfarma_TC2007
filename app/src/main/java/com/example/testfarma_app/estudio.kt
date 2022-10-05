@@ -1,74 +1,136 @@
 package com.example.testfarma_app
-
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.testfarma_app.modelo.estudio_modelo
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.testfarma_app.eventBus.UpdateCartEvent
+import com.example.testfarma_app.listener.CarritoLoadListener
+import com.example.testfarma_app.listener.IDEstudioListener
+import com.example.testfarma_app.modelo.Carrito_modelo
+import com.example.testfarma_app.modelo.Estudio_modelo
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_estudio.*
-import kotlinx.android.synthetic.main.activity_sign_in.back
-import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 
-private val list = mutableListOf<CarouselItem>()
 
-class estudio : AppCompatActivity(), estudio_adapter.OnEstudioClickListener {
+class estudio : AppCompatActivity(), IDEstudioListener,  CarritoLoadListener{
+    lateinit var estudioLoadListener: IDEstudioListener
+    lateinit var cartLoadListener: CarritoLoadListener
+
+    override fun onStart() {
+        super.onStart()
+        EventBus.getDefault().register(this)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if(EventBus.getDefault().hasSubscriberForEvent(UpdateCartEvent::class.java))
+            EventBus.getDefault().removeStickyEvent(UpdateCartEvent::class.java)
+        EventBus.getDefault().unregister(this)
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
+    fun onUpdateCartEvent(event: UpdateCartEvent){
+        countCartFromFirebase()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estudio)
-        /*val recyclerView = findViewById<RecyclerView>(R.id.resultados_rec)
-        val adapter = estudio_adapter()
-         */
 
-        /*val carousel: ImageCarousel = findViewById(R.id.carousel)
-        list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
-        list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))
-        carousel.addData(list)
-         */
-
-        /*
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = adapter
-
-         */
-
-        //contenido en lista de estudio
-        setupRecyclerView()
-
-        //regresar al main
-        back.setOnClickListener {
-            val intent = Intent(this, MainActivity_NotSignedIn::class.java)
+        irCarrito.setOnClickListener {
+            val intent = Intent(this, Carrito::class.java)
             startActivity(intent)
             finish()
         }
-    }
-    private fun setupRecyclerView() {
-        val linkIcono_mas = "https://cdn-icons-png.flaticon.com/128/0/517.png"
-        resultados_rec.layoutManager = LinearLayoutManager(this)
-        val listEstudios: List<estudio_modelo> = listOf(
-            estudio_modelo("Estudio de sangre", "1234", linkIcono_mas),
-            estudio_modelo("Estudio de saliva", "1432", linkIcono_mas),
-            estudio_modelo("Estudio de orina", "3214", linkIcono_mas),
-            estudio_modelo("Estudio de COVID19", "2122", linkIcono_mas),
-            estudio_modelo("Estudio de cancer", "4124", linkIcono_mas)
-        )
-        resultados_rec.adapter = estudio_adapter(this, listEstudios, this)
+
+        menu.setOnClickListener {
+            val intent = Intent(this, MenuApp::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        init()
+        loadEstudioFromFirebase()
+        countCartFromFirebase()
     }
 
-    override fun onIconoClick(nombre: String, precio: String) {
-        //val builder = AlertDialog.Builder(this@estudio)
+    private fun countCartFromFirebase() {
+        val cartModels : MutableList<Carrito_modelo> = ArrayList()
+        FirebaseDatabase.getInstance()
+            .getReference("Cart")
+            .child("uid")
+            .addListenerForSingleValueEvent(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    for(cartSnapshot in snapshot.children){
+                        val cartModel = cartSnapshot.getValue(Carrito_modelo::class.java)
+                        cartModel!!.key = cartSnapshot.key
+                        cartModels.add(cartModel)
+                    }
+                    cartLoadListener.onLoadCartSuccess(cartModels)
+                }
 
+                override fun onCancelled(error: DatabaseError) {
+                    cartLoadListener.onLoadCartFailed(error.message)
+                }
+            })
+    }
 
-        val intent = Intent(this, estudio_detail::class.java)
+    private fun loadEstudioFromFirebase() {
+        val estudioModelos : MutableList<Estudio_modelo> = ArrayList()
+        FirebaseDatabase.getInstance()
+            .getReference("Estudio")
+            .addListenerForSingleValueEvent(object :ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    if(snapshot.exists()){
+                        for(estudioSnapshot in snapshot.children){
+                            val estudioModelo = estudioSnapshot.getValue(Estudio_modelo::class.java)
+                            estudioModelo!!.key = estudioSnapshot.key
+                            estudioModelos.add(estudioModelo)
+                        }
+                        estudioLoadListener.onLoadSucces(estudioModelos)
+                    }
+                    else
+                        estudioLoadListener.onLoadFailed("Error,Estudio no existe")
+                }
+                override fun onCancelled(error: DatabaseError) {
+                    estudioLoadListener.onLoadFailed(error.message)
+                }
+            })
 
+    }
+    private fun init(){
+        estudioLoadListener = this
+        cartLoadListener = this
 
-        intent.putExtra("popupestudio", nombre)
-        intent.putExtra("popupprecio", precio)
-        intent.putExtra("popuptexto1", "Requerimiento: xxx")
-        intent.putExtra("popuptexto2", "Requerimiento: xxx")
-        intent.putExtra("darkstatusbar", false)
-        //builder.setView(intent)
-        //val dialog = builder.create()
-        //dialog.show()
-        startActivity(intent)
+        val gridLayoutManager = GridLayoutManager(this,1)
+        estudio_rec.layoutManager = gridLayoutManager
+        //estudio_rec.addItemDecoration(SpaceItemDecoration())
+    }
+
+    override fun onLoadSucces(estudioModelList: List<Estudio_modelo>?) {
+        val adapter = Estudio_adapter(this,estudioModelList!!, cartLoadListener)
+        estudio_rec.adapter = adapter
+    }
+    override fun onLoadFailed(message: String?) {
+        Snackbar.make(findViewById(R.id.estudio_relativeLayout),message!!, Snackbar.LENGTH_LONG).show()
+    }
+
+    override fun onLoadCartSuccess(cartModelList: List<Carrito_modelo>) {
+        var cartSum = 0
+        for(cartModel in cartModelList!!) cartSum+= cartModel!!.quantity
+        badge!!.setNumber(cartSum)
+
+    }
+
+    override fun onLoadCartFailed(message: String?) {
+
+        Snackbar.make(findViewById(R.id.estudio_relativeLayout),message!!, Snackbar.LENGTH_LONG).show()
     }
 }

@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout3"
+    android:id="@+id/carrito_relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity_NotSignedIn">
@@ -18,31 +18,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/carrito_icon"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/carrito_icon"
-            android:contentDescription="@string/carrito"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.517"
-            tools:ignore="TouchTargetSizeCheck"
-            tools:layout_conversion_absoluteHeight="40dp"
-            tools:layout_conversion_absoluteWidth="40dp" />
-
-        <ImageButton
             android:id="@+id/perfil"
             android:layout_width="35dp"
             android:layout_height="42dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/perfil"
             android:contentDescription="@string/perfil"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/carrito_icon"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="40dp"
@@ -52,7 +36,7 @@
             android:id="@+id/menu"
             android:layout_width="40dp"
             android:layout_height="35dp"
-            android:layout_marginStart="14dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/menu"
@@ -117,21 +101,25 @@
 
             <Button
                 android:id="@+id/back"
-                android:layout_width="134dp"
-                android:layout_height="59dp"
-                android:layout_marginStart="228dp"
-                android:layout_marginBottom="68dp"
+                android:layout_width="144dp"
+                android:layout_height="66dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="86dp"
                 android:text="Continua viendo"
                 android:textColor="#455A64"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <TextView
                 android:id="@+id/textView7"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
                 android:text="Carrito"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/black"
                 android:textSize="34sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -139,18 +127,19 @@
 
             <View
                 android:id="@+id/divider"
-                android:layout_width="391dp"
+                android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="96dp"
                 android:background="?android:attr/listDivider"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
             <TextView
                 android:id="@+id/carrito_estudioTitulo"
                 style="@style/Widget.Inventory.Header"
-                android:layout_marginStart="@dimen/margin_between_elements"
+                android:layout_marginStart="40dp"
                 android:text="Estudio"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toStartOf="@+id/carrito_informacionTitulo"
@@ -162,6 +151,7 @@
                 android:id="@+id/carrito_informacionTitulo"
                 style="@style/Widget.Inventory.Header"
                 android:layout_below="@+id/carrito_estudioTitulo"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="8dp"
                 android:text="Informacion"
                 android:textAlignment="textStart"
@@ -174,7 +164,10 @@
             <TextView
                 android:id="@+id/carrito_precioTitulo"
                 style="@style/Widget.Inventory.Header"
+                android:layout_width="111dp"
+                android:layout_height="13dp"
                 android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
                 android:text="Precio"
                 android:textAlignment="textStart"
                 android:textSize="10sp"
@@ -193,9 +186,9 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/carrito_recy"
-                android:layout_width="395dp"
-                android:layout_height="289dp"
-                android:layout_marginTop="60dp"
+                android:layout_width="0dp"
+                android:layout_height="297dp"
+                android:layout_marginTop="40dp"
                 android:scrollbars="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -204,15 +197,48 @@
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="68dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="96dp"
                 android:backgroundTint="#8F8E8E"
                 android:text="Generar factura"
                 android:textColor="#212121"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/back" />
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/texto_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Subtotal : "
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="104dp"
+                android:text="Proceder al pago"
+                android:textColor="#3C3838"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1234"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/texto_sub"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

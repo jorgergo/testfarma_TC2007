@@ -19,31 +19,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/carrito_icon"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/carrito_icon"
-            android:contentDescription="@string/carrito"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.517"
-            tools:ignore="TouchTargetSizeCheck"
-            tools:layout_conversion_absoluteHeight="40dp"
-            tools:layout_conversion_absoluteWidth="40dp" />
-
-        <ImageButton
             android:id="@+id/perfil"
             android:layout_width="35dp"
             android:layout_height="42dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/perfil"
             android:contentDescription="@string/perfil"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/carrito_icon"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck"
             tools:layout_conversion_absoluteHeight="40dp"
@@ -53,7 +37,7 @@
             android:id="@+id/menu"
             android:layout_width="40dp"
             android:layout_height="35dp"
-            android:layout_marginStart="14dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/menu"
@@ -177,18 +161,6 @@
 
                 </LinearLayout>
             </ScrollView>
-
-            <Button
-                android:id="@+id/back"
-                android:layout_width="127dp"
-                android:layout_height="44dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/back"
-                android:textColor="#455A64"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="TouchTargetSizeCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
