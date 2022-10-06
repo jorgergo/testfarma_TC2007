@@ -6,6 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".privacidad">
 
+    <ImageButton
+        android:id="@+id/logo3"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/logo"
+        android:contentDescription="@string/logo"
+        android:foregroundGravity="center|center_horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:layout_conversion_absoluteHeight="70dp"
+        tools:layout_conversion_absoluteWidth="245dp" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="#FFC107"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="#FFC107"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024">
+
+    </FrameLayout>
+
     <Button
         android:id="@+id/back_reg"
         android:layout_width="288dp"
@@ -13,9 +57,39 @@
         android:layout_marginStart="52dp"
         android:layout_marginEnd="53dp"
         android:text="Regresar"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888" />
+
+    <LinearLayout
+        android:layout_width="311dp"
+        android:layout_height="457dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Privacidad_politicas_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet sapien sed lacus viverra molestie sit amet id leo. Phasellus varius tellus dolor, aliquam hendrerit lorem venenatis vel. Aenean tempus sed libero id eleifend. Vestibulum vel diam rutrum, sodales risus quis, malesuada tellus. Fusce imperdiet vestibulum ante. Suspendisse nisl magna, placerat vitae venenatis quis, pretium a nibh. Proin ultricies dolor eu elit auctor maximus. Integer finibus congue libero sit amet tempus. Aliquam non nisl diam. Morbi accumsan, lorem eget tincidunt tristique, libero magna sagittis dolor, sed blandit lectus turpis id nisl. Fusce mollis, erat in consequat sollicitudin, tortor dolor fringilla augue, pretium ullamcorper mauris est non massa. Vivamus non efficitur arcu, in elementum purus. Nullam elementum ante at nisl viverra, quis suscipit libero imperdiet. Praesent non dictum quam, eget ultrices nulla. Vestibulum aliquam dapibus vulputate. Nulla faucibus dolor ipsum, et tempor enim fermentum quis.  Nullam neque lorem, dignissim eu fringilla id, consequat vel massa. Donec faucibus sit amet nisl sit amet vulputate. Maecenas non lacinia felis, a ultrices mi. Donec a orci eget ipsum egestas viverra non pellentesque nibh. Suspendisse potenti. Proin nec risus massa. Sed velit neque, placerat et purus sed, commodo sagittis ex. Pellentesque non metus eget mi vestibulum convallis vitae in libero. Nulla facilisi. Etiam odio nulla, sodales eget mi in, tristique facilisis nisl. Phasellus at lobortis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Ut felis ex, bibendum a consequat vitae, ullamcorper at ipsum. Aenean augue felis, euismod sed rutrum a, sagittis a turpis. Nullam ullamcorper mi sit amet cursus fringilla. Pellentesque ullamcorper nunc in magna blandit ultricies. Morbi libero turpis, ultricies vel bibendum eget, pharetra nec nisi. Integer turpis odio, malesuada vitae pretium vitae, elementum non velit. Aenean ac posuere orci.  Quisque euismod lacus enim, vitae bibendum mauris ullamcorper sed. Donec vel dolor at risus semper tempor. Cras sollicitudin urna quis neque dictum sollicitudin. Nunc turpis nibh, sollicitudin sed lacinia eu, venenatis eget enim. Aliquam convallis volutpat lorem non placerat. Vivamus sit amet ligula nec magna hendrerit lacinia. In quis varius mi. Ut in mi sodales, sollicitudin ante commodo, faucibus sem. Nunc sodales ornare sapien sed eleifend. Phasellus eu enim viverra, venenatis ante eu, lacinia nunc. Nulla porta gravida quam nec scelerisque. Nulla leo nibh, porta vel facilisis nec, vehicula sit amet purus. Vestibulum a nulla elementum, semper lacus nec, tristique metus.  Duis ut leo erat. Proin ornare ut ex sit amet porttitor. Sed tincidunt lacus vel neque volutpat aliquam. Suspendisse hendrerit risus vel dolor volutpat tempor. Nam eget metus non ipsum ornare tincidunt. Vivamus mi felis, feugiat a sem ut, interdum placerat lectus. Nulla facilisi. Mauris auctor laoreet maximus. Phasellus gravida augue nec viverra dignissim. Suspendisse mattis scelerisque tellus eget consequat. Pellentesque pellentesque ligula felis. Sed facilisis a dolor quis eleifend. Ut sed molestie magna, sit amet sollicitudin risus. Nullam gravida urna arcu." />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
