@@ -2,6 +2,7 @@ package com.example.testfarma_app
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -12,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_sign_in.*
 class SignIn : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 

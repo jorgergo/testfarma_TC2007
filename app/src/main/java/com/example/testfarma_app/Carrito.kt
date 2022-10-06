@@ -1,6 +1,7 @@
 package com.example.testfarma_app
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -26,6 +27,7 @@ class Carrito : AppCompatActivity(), CarritoLoadListener {
     var cartLoadListener: CarritoLoadListener ?= null
 
     override fun onStart() {
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         super.onStart()
         EventBus.getDefault().register(this)
     }

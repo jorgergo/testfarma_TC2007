@@ -2,6 +2,7 @@ package com.example.testfarma_app
 
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
@@ -24,6 +25,7 @@ class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         super.onCreate(savedInstanceState)
         binding = ActivityApptBinding.inflate(layoutInflater)
         setContentView(binding.root)

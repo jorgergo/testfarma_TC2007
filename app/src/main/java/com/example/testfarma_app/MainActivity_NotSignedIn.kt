@@ -1,6 +1,7 @@
 package com.example.testfarma_app
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,6 +15,8 @@ class MainActivity_NotSignedIn : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //disable landscape orientation
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         setContentView(R.layout.activity_main)
         val carousel: ImageCarousel = findViewById(R.id.carousel)
         list.add(CarouselItem(imageDrawable = R.drawable.imagen_ejemplouno))

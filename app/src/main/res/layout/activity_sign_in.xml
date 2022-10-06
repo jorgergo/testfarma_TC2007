@@ -39,8 +39,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bloque_amarillo"
-        android:layout_width="0dp"
-        android:layout_height="700dp"
+        android:layout_width="398dp"
+        android:layout_height="739dp"
         android:layout_marginBottom="200dp"
         android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
@@ -53,17 +53,29 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/authLayout"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="395dp"
+            android:layout_height="737dp"
             android:layout_marginBottom="30dp"
             android:background="@color/white"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
+
+            <FrameLayout
+                android:id="@+id/frameLayout2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="#FFC107"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </FrameLayout>
 
             <EditText
                 android:id="@+id/email"
@@ -161,7 +173,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_login"
+                app:layout_constraintVertical_bias="0.069" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,6 +1,7 @@
 package com.example.testfarma_app
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -18,6 +19,7 @@ class UserDataInfo:  AppCompatActivity() {
     private lateinit var databaseReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         super.onCreate(savedInstanceState)
         binding = UserInfoLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
