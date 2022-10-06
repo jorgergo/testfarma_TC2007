@@ -9,21 +9,25 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testfarma_app.databinding.ActivityApptBinding
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_appt.*
 
 
 class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
     private lateinit var binding: ActivityApptBinding
-
+    private lateinit var database: DatabaseReference
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityApptBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         menu.setOnClickListener {
             val intent = Intent(this, MenuApp::class.java)
             startActivity(intent)
@@ -82,6 +86,38 @@ class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
             },myYear,myMonth,myDay)
             datePickerDialog.show()
         }
+
+        binding.saveAppt.setOnClickListener {
+            val userid = binding.idUsin.text.toString()
+            val fecha = binding.dateSelec.text.toString()
+            val hora = binding.timeSelect.text.toString()
+            val estudio = binding.estudioSelect.text.toString()
+            val domicilio = binding.homeUsin.text.toString()
+            val sucursal = binding.sucursalSelect.text.toString()
+
+            database = FirebaseDatabase.getInstance().getReference("Appt")
+            val Appt = Appt(userid, fecha, hora, estudio, domicilio, sucursal)
+            database.child(userid).setValue(Appt).addOnSuccessListener {
+                binding.idUsin.text.clear()
+                binding.dateSelec.text.clear()
+                binding.timeSelect.text.clear()
+                binding.estudioSelect.text.clear()
+                binding.homeUsin.text.clear()
+                binding.sucursalSelect.text.clear()
+
+                Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener {
+                Toast.makeText(this, "Información Incompleta", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+        btn_sucursalpop.setOnClickListener {
+            var dialog = PopUpFragment()
+
+            dialog.show(supportFragmentManager, "PopUpFragment")
+        }
+
 
     }
 
