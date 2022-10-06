@@ -18,7 +18,7 @@
         android:weightSum="5">
 
         <LinearLayout
-            android:layout_width="338dp"
+            android:layout_width="345dp"
             android:layout_height="71dp"
             android:layout_weight="3"
             android:orientation="horizontal"
@@ -26,7 +26,7 @@
 
 
             <RelativeLayout
-                android:layout_width="132dp"
+                android:layout_width="179dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:orientation="vertical">

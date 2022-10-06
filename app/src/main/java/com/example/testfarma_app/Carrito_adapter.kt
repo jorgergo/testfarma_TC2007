@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testfarma_app.eventBus.UpdateCartEvent
 import com.example.testfarma_app.modelo.Carrito_modelo
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import org.greenrobot.eventbus.EventBus
 
@@ -19,6 +21,8 @@ class Carrito_adapter(
     private  val cartModelList: List<(Carrito_modelo)>
 ):RecyclerView.Adapter<Carrito_adapter.CarritoViewHolder>() {
 
+    private lateinit var auth : FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
 
     class CarritoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
@@ -47,9 +51,15 @@ class Carrito_adapter(
     }
 
     override fun onBindViewHolder(holder: CarritoViewHolder, position: Int) {
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Cart")
+        auth = FirebaseAuth.getInstance()
+        val uid = auth.currentUser?.uid
+
         holder.txtName!!.text = StringBuilder().append(cartModelList[position].nombre)
         holder.txtPrice!!.text = StringBuilder("$").append(cartModelList[position].precio)
         holder.txtReque!!.text = StringBuilder("Requerimiento: ").append(cartModelList[position].reque)
+        holder.txtQuantity!!.text = StringBuilder("").append(cartModelList[position].quantity)
 
         //botones
         holder.btnMinus!!.setOnClickListener {_ -> minusCartItem(holder,cartModelList[position]) }
@@ -62,9 +72,7 @@ class Carrito_adapter(
                 .setPositiveButton("Eliminar") {dialog, _ ->
 
                     notifyItemRemoved(position)
-                    FirebaseDatabase.getInstance()
-                        .getReference("Cart")
-                        .child("uid")
+                    databaseReference.child(uid!!)
                         .child(cartModelList[position].key!!)
                         .removeValue()
                         .addOnSuccessListener { EventBus.getDefault().postSticky(UpdateCartEvent()) }
@@ -91,9 +99,12 @@ class Carrito_adapter(
     }
 
     private fun updateFirebase(carritoModelo: Carrito_modelo) {
-        FirebaseDatabase.getInstance()
-            .getReference("Cart")
-            .child("uid")
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Cart")
+        auth = FirebaseAuth.getInstance()
+        val uid = auth.currentUser?.uid
+
+        databaseReference.child(uid!!)
             .child(carritoModelo.key!!)
             .setValue(carritoModelo)
             .addOnSuccessListener { EventBus.getDefault().postSticky(UpdateCartEvent()) }

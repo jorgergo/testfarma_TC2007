@@ -9,10 +9,8 @@ import com.example.testfarma_app.eventBus.UpdateCartEvent
 import com.example.testfarma_app.listener.CarritoLoadListener
 import com.example.testfarma_app.modelo.Carrito_modelo
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_acercadenos.menu
 import kotlinx.android.synthetic.main.activity_carrito.*
 import kotlinx.android.synthetic.main.activity_sign_in.back
@@ -21,6 +19,9 @@ import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
 class Carrito : AppCompatActivity(), CarritoLoadListener {
+
+    private lateinit var auth : FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
 
     var cartLoadListener: CarritoLoadListener ?= null
 
@@ -64,10 +65,13 @@ class Carrito : AppCompatActivity(), CarritoLoadListener {
     }
 
     private fun loadCartFromFirebase() {
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Cart")
+        auth = FirebaseAuth.getInstance()
+        val uid = auth.currentUser?.uid
+
         val cartModels : MutableList<Carrito_modelo> = ArrayList()
-        FirebaseDatabase.getInstance()
-            .getReference("Cart")
-            .child("uid")
+        databaseReference.child(uid!!)
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     for(cartSnapshot in snapshot.children){
@@ -100,6 +104,7 @@ class Carrito : AppCompatActivity(), CarritoLoadListener {
         txtTotal.text = StringBuilder("$").append(sum)
         val adapter = Carrito_adapter(this, cartModelList)
         carrito_recy!!.adapter = adapter
+
     }
 
     override fun onLoadCartFailed(message: String?) {
