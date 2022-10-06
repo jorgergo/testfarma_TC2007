@@ -25,67 +25,73 @@
 
     <Button
         android:id="@+id/btn_citas"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
         android:layout_marginTop="36dp"
         android:backgroundTint="#c4c4c4"
         android:text="Citas"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <Button
         android:id="@+id/btn_estudios"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
         android:backgroundTint="#c4c4c4"
         android:text="Estudios disponibles"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_resultados" />
 
     <Button
         android:id="@+id/btn_nosotros"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
         android:backgroundTint="#c4c4c4"
         android:text="A cerca de nosotros"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_promo" />
 
     <Button
         android:id="@+id/btn_carrito"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
         android:layout_marginTop="51dp"
         android:backgroundTint="@color/colorPrimaryVariant"
         android:text="@string/carrito"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btn_nosotros" />
 
     <Button
         android:id="@+id/btn_resultados"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
         android:layout_marginTop="2dp"
         android:backgroundTint="@color/colorPrimaryVariant"
         android:text="Resultados"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_citas"
         tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btn_promo"
-        android:layout_width="393dp"
+        android:layout_width="0dp"
         android:layout_height="51dp"
         android:layout_marginTop="1dp"
         android:backgroundTint="@color/colorPrimaryVariant"
         android:text="Promociones"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_estudios" />
 
     <ImageButton
