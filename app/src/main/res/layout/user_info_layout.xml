@@ -85,6 +85,7 @@
                 android:layout_width="302dp"
                 android:layout_height="36dp"
                 android:layout_marginTop="12dp"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
@@ -95,6 +96,7 @@
                 android:layout_width="302dp"
                 android:layout_height="36dp"
                 android:layout_marginTop="12dp"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +116,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textEmail" />
 
             <EditText
-                android:id="@+id/telefono"
+                android:id="@+id/editTelefono"
                 android:layout_width="349dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="20dp"
@@ -122,17 +124,18 @@
                 android:layout_marginEnd="24dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Telefono"
-                android:inputType="textPersonName|textEmailAddress"
+                android:hint="@string/telefono"
+                android:inputType="phone"
                 android:textColorHighlight="#FFC107"
                 android:textColorLink="#FBCD23"
+                app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/acerca_de"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <EditText
-                android:id="@+id/fechaNac"
+                android:id="@+id/editFechaNac"
                 android:layout_width="349dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="20dp"
@@ -140,18 +143,19 @@
                 android:layout_marginEnd="24dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Fecha de Nacimiento"
-                android:inputType="textPersonName|textEmailAddress"
+                android:hint="@string/fecha_de_nacimiento"
+                android:inputType="date|datetime|textImeMultiLine|time"
                 android:textColorHighlight="#FFC107"
                 android:textColorLink="#FBCD23"
+                app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/telefono"
+                app:layout_constraintTop_toBottomOf="@+id/editTelefono"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <EditText
-                android:id="@+id/estatura"
+                android:id="@+id/editEstatura"
                 android:layout_width="349dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="20dp"
@@ -159,18 +163,19 @@
                 android:layout_marginEnd="24dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Estatura"
-                android:inputType="textPersonName|textEmailAddress"
+                android:hint="@string/estatura"
+                android:inputType="number|numberDecimal"
                 android:textColorHighlight="#FFC107"
                 android:textColorLink="#FBCD23"
+                app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fechaNac"
+                app:layout_constraintTop_toBottomOf="@+id/editFechaNac"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <EditText
-                android:id="@+id/peso"
+                android:id="@+id/editPeso"
                 android:layout_width="349dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="20dp"
@@ -178,14 +183,15 @@
                 android:layout_marginEnd="24dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Peso"
-                android:inputType="textPersonName|textEmailAddress"
+                android:hint="@string/peso"
+                android:inputType="number|numberDecimal"
                 android:textColorHighlight="#FFC107"
                 android:textColorLink="#FBCD23"
+                app:errorEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/estatura"
+                app:layout_constraintTop_toBottomOf="@+id/editEstatura"
                 tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
             <Button

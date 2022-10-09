@@ -135,7 +135,10 @@
     <string name="ingrese_su_fecha_de_nacimiento">Ingrese su fecha de nacimiento</string>
     <string name="ingrese_su_estatura">Ingrese su estatura</string>
     <string name="ingrese_su_peso">Ingrese su peso</string>
->>>>>>> Stashed changes
+    <string name="peso">Peso: X.XX kg</string>
+    <string name="estatura">Estatura: X.XX m</string>
+    <string name="fecha_de_nacimiento">Fecha de Nacimiento: AAAA/MM/DD</string>
+    >>>>>>> Stashed changes
 
     <string-array name="Regimen">
         <item>A1</item>

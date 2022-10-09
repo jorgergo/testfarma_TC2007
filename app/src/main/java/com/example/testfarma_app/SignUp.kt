@@ -105,7 +105,7 @@ class SignUp : AppCompatActivity() {
 
         )
         return if (contra.isEmpty()) {
-            editTextPassword.error = "El campo del correo no puede estar vacío"
+            editTextPassword.error = "El campo de la contraseña no puede estar vacío"
             false
         }else if (!passwordRegex.matcher(contra).matches()) {
             editTextPassword.error = "Revise la contraseña que contenga todo lo que se pide"
