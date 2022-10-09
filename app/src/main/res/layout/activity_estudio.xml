@@ -164,7 +164,7 @@
             android:layout_width="133dp"
             android:layout_height="48dp"
             android:layout_marginStart="128dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="14dp"
             android:text="Ir carrito"
             android:textColor="#455A64"
             app:layout_constraintStart_toStartOf="parent"

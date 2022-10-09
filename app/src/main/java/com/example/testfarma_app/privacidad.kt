@@ -4,26 +4,20 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.promo_layout.*
-import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
+import kotlinx.android.synthetic.main.activity_privacidad.*
 
-class ShowFacturas: AppCompatActivity() {
-
-    private val list = mutableListOf<CarouselItem>()
-
+class privacidad : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_privacidad)
 
-        setContentView(R.layout.show_facturas_layout)
-
-        menu.setOnClickListener {
-            val intent = Intent(this, MenuApp::class.java)
+        back_reg.setOnClickListener {
+            val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
             finish()
         }
-
-
     }
+
 
 }

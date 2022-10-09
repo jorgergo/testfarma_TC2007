@@ -3,6 +3,7 @@ package com.example.testfarma_app
 import android.app.DownloadManager
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -31,6 +32,7 @@ class resultado : AppCompatActivity() {
     val storageRef = Firebase.storage.reference
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado)
 
