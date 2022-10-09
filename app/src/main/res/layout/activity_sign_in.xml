@@ -84,7 +84,7 @@
                 android:layout_marginTop="12dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="@string/email1"
+                android:hint="@string/email"
                 android:inputType="textPersonName|textEmailAddress"
                 android:textColorHighlight="#FFC107"
                 android:textColorLink="#FBCD23"

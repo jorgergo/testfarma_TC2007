@@ -61,7 +61,7 @@ override fun onStart() {
     private fun showAlert() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
-        builder.setMessage("Se ha producido un error")
+        builder.setMessage("Verifique que sus credenciales sean correctas")
         builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()

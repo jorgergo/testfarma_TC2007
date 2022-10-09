@@ -138,6 +138,7 @@
     <string name="peso">Peso: X.XX kg</string>
     <string name="estatura">Estatura: X.XX m</string>
     <string name="fecha_de_nacimiento">Fecha de Nacimiento: AAAA/MM/DD</string>
+    <string name="contrase_a">Contraseña</string>
     >>>>>>> Stashed changes
 
     <string-array name="Regimen">
