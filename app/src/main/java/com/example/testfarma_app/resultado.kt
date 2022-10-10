@@ -104,7 +104,7 @@ class resultado : AppCompatActivity() {
     }
 
     private fun getArchdata(userIdn: String) {
-        dbref = FirebaseDatabase.getInstance().getReference("Resultados/feAaJu7B6PP7IgKrCqKRacJ6cTY2")
+        dbref = FirebaseDatabase.getInstance().getReference("Resultados/$userIdn")
         dbref.addValueEventListener(object : ValueEventListener{
 
 
@@ -124,24 +124,16 @@ class resultado : AppCompatActivity() {
 
                         var fechaRec: Date = sdf.parse(fechaBase) as Date
                         var cmp = fechaRec.compareTo(fechaArchivo)
-                        Log.i("Estatus", "fecha $fechaArch");
-                        Log.i("Estatus", "cmp $cmp");
-
                         if (cmp < 0){
                             fechaBase = fechaArch
                         }
                     }
-                    Log.i("Estatus", "-----Fecha F $fechaBase");
                     for(userSnapshot in snapshot.children) {
                         val user2 = userSnapshot.getValue(arch_resultado::class.java)
                         var fechaArch = user2?.date.toString()
                         var fechaArchivo: Date = sdf.parse(fechaArch) as Date
-
                         var fechaRec: Date = sdf.parse(fechaBase) as Date
                         var cmp2 = fechaRec.compareTo(fechaArchivo)
-                        Log.i("Estatus", "Fecha F $fechaBase");
-                        Log.i("Estatus", "fecha $fechaArch");
-                        Log.i("Estatus", "cmp $cmp2");
 
                         if (cmp2 == 0){
                             archArrayListRes.add(user2!!)
@@ -154,38 +146,29 @@ class resultado : AppCompatActivity() {
 
                     adapter.setOnClickListener(object : resultadosAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
-                            //Toast.makeText(this@resultado, "clicked item no. "+ archArrayList.get(position).f_name.toString(),Toast.LENGTH_SHORT).show()
-
                             var nombreFile = archArrayList.get(position).f_name.toString()
-                            //Toast.makeText(this@resultado, "clicked item : "+ nombreFile,Toast.LENGTH_SHORT).show()
-                            var strStringName = nombreFile.split(".").toTypedArray()
-                            //Toast.makeText(this@resultado, "nombre archivo: "+nombreDarchivo+tipoDarchivo, Toast.LENGTH_SHORT).show()
-                            //downloadFiles(nombreDarchivo,tipoDarchivo)
-                            var nomFile = strStringName[0]
-                            var tFile = strStringName[1]
+                            val lastIndexOf: Int = nombreFile.lastIndexOf(".")
+                            var nomFile = nombreFile.substring(0,lastIndexOf)
+                            var tFile = nombreFile.substring(lastIndexOf+1, nombreFile.length)
+                            Log.i("Estatus", "tFile $tFile")
                             download(nomFile, tFile, userIdn)
                         }
                     })
 
                     adapterRes.setOnClickListener(object : resultadosAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
-                            //Toast.makeText(this@resultado, "clicked item no. "+ archArrayList.get(position).f_name.toString(),Toast.LENGTH_SHORT).show()
-
                             var nombreFile2 = archArrayListRes.get(position).f_name.toString()
-                            //Toast.makeText(this@resultado, "clicked item : "+ nombreFile,Toast.LENGTH_SHORT).show()
-                            var strStringName2 = nombreFile2.split(".").toTypedArray()
-                            //Toast.makeText(this@resultado, "nombre archivo: "+nombreDarchivo+tipoDarchivo, Toast.LENGTH_SHORT).show()
-                            //downloadFiles(nombreDarchivo,tipoDarchivo)
-                            var nomFile2 = strStringName2[0]
-                            var tFile2 = strStringName2[1]
-                            download(nomFile2, tFile2, userIdn)
+                            val lastIndexOf: Int = nombreFile2.lastIndexOf(".")
+                            var nomFile = nombreFile2.substring(0,lastIndexOf)
+                            var tFile = nombreFile2.substring(lastIndexOf+1, nombreFile2.length)
+                            download(nomFile, tFile, userIdn)
                         }
                     })
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Log.i("Estatus", "Error de conexion");
+                Log.i("Estatus", "Error de conexion")
             }
         }
         )

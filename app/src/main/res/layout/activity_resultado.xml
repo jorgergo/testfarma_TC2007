@@ -102,7 +102,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.193"
+            app:layout_constraintHorizontal_bias="0.078"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,7 +110,6 @@
             android:id="@+id/userID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
             android:text="1123456789"
             android:textColor="#272625"
             android:textSize="24sp"
@@ -119,7 +118,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/Id_usuario"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -171,12 +171,12 @@
                         android:id="@+id/recycler_view_res"
                         android:layout_width="match_parent"
                         android:layout_height="262dp"
+                        android:layout_gravity="center_horizontal"
                         android:background="#c4c4c4"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-
-                        android:scrollbars="horizontal|vertical"
+                        android:scrollbars="none"
                         app:layoutManager="LinearLayoutManager"
-                        tools:listitem="@layout/resultado_layout" />
+                        tools:listitem="@layout/recycler_view_item" />
                 </FrameLayout>
 
                 <TextView
@@ -203,6 +203,7 @@
                         android:id="@+id/recycler_View_Hist"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
                         android:background="#c4c4c4"
                         app:layoutManager="LinearLayoutManager"
                         tools:listitem="@layout/resultado_layout">
