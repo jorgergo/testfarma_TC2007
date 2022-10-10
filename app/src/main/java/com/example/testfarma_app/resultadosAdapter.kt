@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class resultadosAdapter(private val archList: ArrayList<arch_resultado>): RecyclerView.Adapter<resultadosAdapter.resViewHolder>(){
 
-
     private lateinit var mListener: onItemClickListener
 
     interface onItemClickListener{
