@@ -39,7 +39,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bloque_amarillo"
-        android:layout_width="398dp"
+        android:layout_width="0dp"
         android:layout_height="739dp"
         android:layout_marginBottom="200dp"
         android:background="@color/colorPrimaryDark"
@@ -53,7 +53,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/authLayout"
-            android:layout_width="395dp"
+            android:layout_width="0dp"
             android:layout_height="737dp"
             android:layout_marginBottom="30dp"
             android:background="@color/white"

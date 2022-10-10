@@ -59,6 +59,12 @@ class estudio : AppCompatActivity(), IDEstudioListener,  CarritoLoadListener{
             finish()
         }
 
+        perfil.setOnClickListener {
+            val intent = Intent( this, UserDataInfo::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         init()
         loadEstudioFromFirebase()
         countCartFromFirebase()

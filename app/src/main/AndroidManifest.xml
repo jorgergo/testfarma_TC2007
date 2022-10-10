@@ -17,6 +17,13 @@
         android:theme="@style/Theme.TestFarma_app"
         tools:targetApi="31">
         <activity
+            android:name=".show_facturas"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".privacidad"
             android:exported="false">
             <meta-data

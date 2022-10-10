@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_acercadenos.menu
 import kotlinx.android.synthetic.main.activity_carrito.*
+import kotlinx.android.synthetic.main.activity_carrito.perfil
 import kotlinx.android.synthetic.main.activity_sign_in.back
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -53,6 +54,18 @@ class Carrito : AppCompatActivity(), CarritoLoadListener {
 
         menu.setOnClickListener {
             val intent = Intent(this, MenuApp::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        perfil.setOnClickListener {
+            val intent = Intent( this, UserDataInfo::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        button.setOnClickListener {
+            val intent = Intent( this, show_facturas::class.java)
             startActivity(intent)
             finish()
         }
