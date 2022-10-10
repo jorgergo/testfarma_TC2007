@@ -1,5 +1,6 @@
 package com.example.testfarma_app
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -9,10 +10,8 @@ import com.example.testfarma_app.listener.IDEstudioListener
 import com.example.testfarma_app.modelo.Carrito_modelo
 import com.example.testfarma_app.modelo.Estudio_modelo
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_estudio.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -22,6 +21,9 @@ import org.greenrobot.eventbus.ThreadMode
 class estudio : AppCompatActivity(), IDEstudioListener,  CarritoLoadListener{
     lateinit var estudioLoadListener: IDEstudioListener
     lateinit var cartLoadListener: CarritoLoadListener
+
+    private lateinit var auth : FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
 
     override fun onStart() {
         super.onStart()
@@ -41,6 +43,7 @@ class estudio : AppCompatActivity(), IDEstudioListener,  CarritoLoadListener{
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_estudio)
 
@@ -56,16 +59,25 @@ class estudio : AppCompatActivity(), IDEstudioListener,  CarritoLoadListener{
             finish()
         }
 
+        perfil.setOnClickListener {
+            val intent = Intent( this, UserDataInfo::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         init()
         loadEstudioFromFirebase()
         countCartFromFirebase()
     }
 
     private fun countCartFromFirebase() {
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Cart")
+        auth = FirebaseAuth.getInstance()
+        val uid = auth.currentUser?.uid
+
         val cartModels : MutableList<Carrito_modelo> = ArrayList()
-        FirebaseDatabase.getInstance()
-            .getReference("Cart")
-            .child("uid")
+        databaseReference.child(uid!!)
             .addListenerForSingleValueEvent(object : ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
                     for(cartSnapshot in snapshot.children){

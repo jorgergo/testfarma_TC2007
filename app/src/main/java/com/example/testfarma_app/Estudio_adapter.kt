@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.testfarma_app.eventBus.UpdateCartEvent
@@ -13,10 +14,8 @@ import com.example.testfarma_app.listener.CarritoLoadListener
 import com.example.testfarma_app.listener.EstudioRecyClickListener
 import com.example.testfarma_app.modelo.Carrito_modelo
 import com.example.testfarma_app.modelo.Estudio_modelo
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import org.greenrobot.eventbus.EventBus
 
 class Estudio_adapter(
@@ -24,6 +23,9 @@ class Estudio_adapter(
     private val list:List<Estudio_modelo>,
     private val cartListener:CarritoLoadListener
     ): RecyclerView.Adapter<Estudio_adapter.MyEstudioViewholder>(){
+
+    private lateinit var auth : FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
 
     class MyEstudioViewholder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
@@ -70,16 +72,25 @@ class Estudio_adapter(
 
         holder.setClickListener(object : EstudioRecyClickListener{
             override fun onItemClickListener(view: View?, position: Int) {
+                Toast.makeText(context, "Agregado "+ list.get(position).nombre + " en carrito", Toast.LENGTH_LONG).show()
                 addToCart(list[position])
+
             }
+
         })
+
     }
 
     private fun addToCart(estudioModelo: Estudio_modelo) {
-        val userCart = FirebaseDatabase.getInstance()
+        databaseReference = FirebaseDatabase.getInstance().getReference("Cart")
+        auth = FirebaseAuth.getInstance()
+        val uid = auth.currentUser?.uid
+        /*val userCart = FirebaseDatabase.getInstance()
             .getReference("Cart")
-            .child("uid")
-        userCart.child(estudioModelo.key!!)
+            .child(uid)
+
+         */
+        databaseReference.child(uid!!).child(estudioModelo.key!!)
             .addListenerForSingleValueEvent(object:ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if(snapshot.exists()){ //si estudio ya esta en carrito, solo actualiza
@@ -90,7 +101,7 @@ class Estudio_adapter(
                         updateData["totalPrice"] =
                             cartModel!!.quantity * cartModel.precio!!.toFloat()
 
-                        userCart.child(estudioModelo.key!!)
+                        databaseReference.child(uid).child(estudioModelo.key!!)
                             .updateChildren(updateData)
                             .addOnSuccessListener {
                                 EventBus.getDefault().postSticky(UpdateCartEvent())
@@ -105,11 +116,10 @@ class Estudio_adapter(
                         cartModel.precio = estudioModelo.precio
                         cartModel.reque = estudioModelo.reque
                         cartModel.dispo = estudioModelo.dispo
-                        cartModel.icono = estudioModelo.icono
                         cartModel.quantity = 1
                         cartModel.totalPrecio = estudioModelo.precio!!.toFloat()
 
-                        userCart.child(estudioModelo.key!!)
+                        databaseReference.child(uid).child(estudioModelo.key!!)
                             .setValue(cartModel)
                             .addOnSuccessListener {
                                 EventBus.getDefault().postSticky(UpdateCartEvent())

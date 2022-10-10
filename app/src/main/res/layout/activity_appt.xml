@@ -5,7 +5,6 @@
     android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".MainActivity_NotSignedIn">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -102,11 +101,10 @@
 
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/titulo_citas"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="44dp"
-                android:layout_marginBottom="21dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="36dp"
                 android:background="@color/colorPrimary"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
@@ -120,7 +118,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/save_appt"
+                android:id="@+id/saveAppt"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_marginBottom="10dp"
@@ -131,7 +129,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
+                app:layout_constraintTop_toBottomOf="@+id/sucursalin"
                 app:layout_constraintVertical_bias="1.0" />
 
             <TextView
@@ -151,11 +149,11 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout8"
+                android:id="@+id/iduserin"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="350dp"
                 android:layout_height="55dp"
-                app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
+                app:layout_constraintBottom_toTopOf="@+id/fechain"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/advertise_text"
@@ -166,15 +164,14 @@
                     android:id="@+id/id_usin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Ingresa tu ID de usario"
-                    android:inputType="textCapCharacters"
+                    android:hint="Ingresa tu correo"
+                    android:inputType="text"
                     android:textColorHint="#757575"
                     android:textSize="14sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout3"
+                android:id="@+id/fechain"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="350dp"
                 android:layout_height="55dp"
@@ -199,7 +196,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout4"
+                android:id="@+id/horain"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="350dp"
                 android:layout_height="55dp"
@@ -208,7 +205,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/fechain"
                 app:layout_constraintVertical_bias="1.0"
                 app:startIconDrawable="@drawable/ic_hora"
                 app:startIconTint="@color/colorPrimary">
@@ -225,7 +222,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout5"
+                android:id="@+id/estudioin"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="350dp"
                 android:layout_height="55dp"
@@ -234,7 +231,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/horain"
                 app:layout_constraintVertical_bias="1.0"
                 app:startIconDrawable="@drawable/ic_estudio"
                 app:startIconTint="@color/colorPrimary">
@@ -250,7 +247,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout6"
+                android:id="@+id/domicilioin"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="350dp"
                 android:layout_height="55dp"
@@ -258,7 +255,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.488"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/estudioin"
                 app:startIconDrawable="@drawable/ic_domicilio"
                 app:startIconTint="@color/colorPrimary">
 
@@ -273,17 +270,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout7"
+                android:id="@+id/sucursalin"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="350dp"
                 android:layout_height="55dp"
-                android:layout_marginBottom="64dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.488"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
-                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintTop_toBottomOf="@+id/domicilioin"
                 app:startIconDrawable="@drawable/ic_location"
                 app:startIconTint="@color/colorPrimary">
 
@@ -301,16 +295,14 @@
                 android:id="@+id/btn_sucursalpop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="21dp"
-                android:layout_marginBottom="484dp"
+                android:layout_marginBottom="488dp"
                 android:text="@string/sucursal_pop"
                 android:textColor="#455A64"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.552"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,6 +1,7 @@
 package com.example.testfarma_app
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
@@ -22,6 +23,7 @@ class SignUp : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reg)
 
@@ -30,13 +32,15 @@ class SignUp : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        setup()
 
-        Politicas_priv.setOnClickListener {
-            val intent = Intent(this, Poliitcasprivacidad::class.java)
+        politicas_priv_button.setOnClickListener {
+            val intent = Intent(this, privacidad::class.java)
             startActivity(intent)
             finish()
         }
+        setup()
+
+
     }
 
     private fun setup() {
@@ -109,7 +113,7 @@ class SignUp : AppCompatActivity() {
 
         )
         return if (contra.isEmpty()) {
-            editTextPassword.error = "El campo del correo no puede estar vacío"
+            editTextPassword.error = "El campo de la contraseña no puede estar vacío"
             false
         }else if (!passwordRegex.matcher(contra).matches()) {
             editTextPassword.error = "Revise la contraseña que contenga todo lo que se pide"

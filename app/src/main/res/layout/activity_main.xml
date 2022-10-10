@@ -42,7 +42,6 @@
         android:id="@+id/authLayout"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="4dp"
         android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,6 +49,18 @@
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontal_nav_bar">
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="#FFC107"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </FrameLayout>
 
         <org.imaginativeworld.whynotimagecarousel.ImageCarousel
             android:id="@+id/carousel"
@@ -66,7 +77,7 @@
             android:layout_marginTop="40dp"
             android:layout_marginBottom="10dp"
             android:text="@string/iniciar_sesion"
-            android:textColor="#455A64"
+            android:textColor="#000000"
             app:layout_constraintBottom_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -93,27 +104,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:text="@string/registrate"
-            android:textColor="#455A64"
+            android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="158dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginEnd="158dp"
-            android:text="@string/o"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_signup"
-            app:layout_constraintVertical_bias="0.021" />
 
         <!--<Button
             android:id="@+id/button3"
