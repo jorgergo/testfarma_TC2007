@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_acercadenos.xml" value="0.21981981981981982" />
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_appt.xml" value="0.20854700854700856" />
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_carrito.xml" value="0.20854700854700856" />
+        <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_datosfacturacion.xml" value="0.21981981981981982" />
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_estudio.xml" value="0.20854700854700856" />
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_home.xml" value="0.20854700854700856" />
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_menu_app.xml" value="0.21981981981981982" />
+        <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_polikitcasprivacidad.xml" value="0.1" />
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_reg.xml" value="0.20854700854700856" />
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_resultado.xml" value="0.264" />
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/activity_resultado2.xml" value="0.20854700854700856" />
@@ -17,7 +21,7 @@
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/list_estudios.xml" value="0.20854700854700856" />
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/list_resultado.xml" value="0.2076923076923077" />
         <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/recycler_view_item.xml" value="0.20854700854700856" />
-        <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/resultado_layout.xml" value="0.4" />
+        <entry key="..\:/Principal/Escuela/Actual/TEC/semestre5/Integracion_d_seguridad/reto/testfarma_TC2007/app/src/main/res/layout/resultado_layout.xml" value="0.21981981981981982" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2275" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2275" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/testfarma_TC2007/app/src/main/res/layout/activity_carrito.xml" value="0.13533834586466165" />

@@ -23,7 +23,7 @@
             android:layout_height="155dp"
             android:adjustViewBounds="true"
             android:background="#00FFFFFF"
-            android:src="@drawable/pdf" />
+            android:src="@drawable/file_icon" />
 
         <TextView
             android:id="@+id/nom_arch"
