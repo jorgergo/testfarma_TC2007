@@ -145,7 +145,7 @@ class SignUp : AppCompatActivity() {
     private fun showAlert() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
-        builder.setMessage("El correo electrónico ya está registrado")
+        builder.setMessage("Revise los campos ingresados")
         builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
