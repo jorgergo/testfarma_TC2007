@@ -164,7 +164,7 @@
                     android:id="@+id/id_usin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Ingresa tu correo"
+                    android:hint="Ingresa tu nombre de usuario"
                     android:inputType="text"
                     android:textColorHint="#757575"
                     android:textSize="14sp" />
