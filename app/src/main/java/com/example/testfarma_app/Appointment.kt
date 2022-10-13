@@ -90,28 +90,26 @@ class Appointment: AppCompatActivity(), AdapterView.OnItemClickListener {
         }
 
         binding.saveAppt.setOnClickListener {
-            val userid = binding.idUsin.text.toString()
-            val fecha = binding.dateSelec.text.toString()
-            val hora = binding.timeSelect.text.toString()
-            val estudio = binding.estudioSelect.text.toString()
-            val domicilio = binding.homeUsin.text.toString()
-            val sucursal = binding.sucursalSelect.text.toString()
-
-            database = FirebaseDatabase.getInstance().getReference("Appt")
-            val Appt = Appt(userid, fecha, hora, estudio, domicilio, sucursal)
-            database.child(userid).setValue(Appt).addOnSuccessListener {
-                binding.idUsin.text.clear()
-                binding.dateSelec.text.clear()
-                binding.timeSelect.text.clear()
-                binding.estudioSelect.text.clear()
-                binding.homeUsin.text.clear()
-                binding.sucursalSelect.text.clear()
-
-                Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener {
+            if ( date_selec.text.isNotEmpty() && time_select.text.isNotEmpty() && estudio_select.text.isNotEmpty() && sucursal_select.text.isNotEmpty()) {
+                val userid = binding.idUsin.text.toString()
+                val fecha = binding.dateSelec.text.toString()
+                val hora = binding.timeSelect.text.toString()
+                val estudio = binding.estudioSelect.text.toString()
+                val domicilio = binding.homeUsin.text.toString()
+                val sucursal = binding.sucursalSelect.text.toString()
+                database = FirebaseDatabase.getInstance().getReference("Appt")
+                val Appt = Appt(userid, fecha, hora, estudio, domicilio, sucursal)
+                database.child(userid).setValue(Appt).addOnSuccessListener {
+                    binding.dateSelec.text.clear()
+                    binding.timeSelect.text.clear()
+                    binding.estudioSelect.text.clear()
+                    binding.homeUsin.text.clear()
+                    binding.sucursalSelect.text.clear()
+                    Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show()
+                }
+            }else {
                 Toast.makeText(this, "Información Incompleta", Toast.LENGTH_SHORT).show()
             }
-
         }
 
         btn_sucursalpop.setOnClickListener {
