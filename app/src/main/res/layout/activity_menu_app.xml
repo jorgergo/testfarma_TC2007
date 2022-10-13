@@ -40,7 +40,7 @@
         android:layout_width="0dp"
         android:layout_height="51dp"
         android:backgroundTint="#c4c4c4"
-        android:text="Estudios disponibles"
+        android:text="Estudios y Producto"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

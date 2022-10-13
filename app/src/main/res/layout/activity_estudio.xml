@@ -116,7 +116,7 @@
                     android:background="@color/colorPrimary"
                     android:fontFamily="sans-serif-black"
                     android:gravity="center"
-                    android:text="Estudio disponible"
+                    android:text="Estudio y Producto"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="34sp" />
