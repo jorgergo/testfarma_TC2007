@@ -51,7 +51,7 @@
         android:layout_width="0dp"
         android:layout_height="51dp"
         android:backgroundTint="#c4c4c4"
-        android:text="A cerca de nosotros"
+        android:text="@string/acerca_de_nosotros"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
