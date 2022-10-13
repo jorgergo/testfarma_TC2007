@@ -9,8 +9,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.testfarma_app.databinding.UserInfoLayoutBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_appt.menu
 import kotlinx.android.synthetic.main.user_info_layout.*
 import java.util.regex.Pattern
@@ -82,6 +84,11 @@ class UserDataInfo:  AppCompatActivity() {
             } else {
                 showAlert()
             }
+        }
+
+        binding.logout.setOnClickListener {
+            Firebase.auth.signOut()
+            startActivity(Intent(this, MainActivity_NotSignedIn::class.java))
         }
     }
     private fun showAlert() {
